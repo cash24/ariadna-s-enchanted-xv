@@ -20,32 +20,36 @@
   <meta name="twitter:site" content="@Lovable" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <!-- Cache Control -->
+  <!-- Cache Control Agresivo -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
-  <!-- Eruda Mobile Console -->
-  <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-  <script>eruda.init();</script>
+  <!-- Fuentes (Carga paralela) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <script>
-    window.APP_VERSION = "1.3.0 - Eruda/Buster";
+    window.APP_VERSION = "1.3.1 - HyperBuster";
 
     // 1. Force trailing slash
     if (window.location.pathname.endsWith('/ariadna-s-enchanted-xv')) {
       window.location.replace(window.location.pathname + '/');
     }
 
-    // 2. Mobile Error Reporter
+    // 2. Mobile Error Reporter (Global)
     window.onerror = function (msg, url, line) {
-      document.body.innerHTML = '<div style="padding: 20px; color: red; font-family: sans-serif; background: #fff; position:fixed; top:0; left:0; width:100%; z-index:9999;">' +
-        '<h2>Error Detectado (Android Debug)</h2>' +
-        '<p><b>Msg:</b> ' + msg + '</p>' +
-        '<p><b>URL:</b> ' + url + '</p>' +
-        '<p><b>Line:</b> ' + line + '</p>' +
-        '<p><b>Version:</b> ' + window.APP_VERSION + '</p>' +
-        '</div>';
+      var errDiv = document.getElementById('mobile-error-box');
+      if (!errDiv) {
+        errDiv = document.createElement('div');
+        errDiv.id = 'mobile-error-box';
+        errDiv.style = 'padding:20px; color:red; background:#fff; position:fixed; top:0; left:0; width:100%; z-index:9999; border-bottom:2px solid red;';
+        document.body.appendChild(errDiv);
+      }
+      errDiv.innerHTML = '<h2>Error Detectado</h2><p>' + msg + '</p><p>Line: ' + line + '</p><p>Ver: ' + window.APP_VERSION + '</p>';
     };
   </script>
 </head>
@@ -58,7 +62,7 @@
         style="width:40px; height:40px; border:3px solid #d4af37; border-top:3px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;">
       </div>
       <p>Cargando invitación...</p>
-      <p style="font-size: 10px; opacity: 0.5; margin-top: 10px;">Versión: 1.3.0 - Eruda/Buster</p>
+      <p style="font-size: 10px; opacity: 0.5; margin-top: 10px;">Versión: 1.3.1 - HyperBuster</p>
       <style>
         @keyframes spin {
           0% {
@@ -72,7 +76,10 @@
       </style>
     </div>
   </div>
-  <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Scripts al final para no bloquear -->
+  <script src="//cdn.jsdelivr.net/npm/eruda" async onload="eruda.init()"></script>
+  <script type="module" src="/src/main.tsx?v=1740000000"></script>
 </body>
 
 </html>
