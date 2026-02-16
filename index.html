@@ -29,45 +29,54 @@
   <meta http-equiv="Expires" content="0" />
 
   <script>
-    window.APP_VERSION = "1.4.3 - NoDependencies";
+    window.APP_VERSION = "1.4.5 - ForceVite";
+    window.APP_START_TIME = Date.now();
 
     // 1. Force trailing slash
     if (window.location.pathname.endsWith('/ariadna-s-enchanted-xv')) {
       window.location.replace(window.location.pathname + '/');
     }
 
-    // 2. Mobile Error Reporter (Global)
+    // 2. Mobile Error Reporter
     window.onerror = function (msg, url, line) {
-      console.log("Error: ", msg);
-      var errDiv = document.getElementById('mobile-error-box');
-      if (!errDiv) {
-        errDiv = document.createElement('div');
-        errDiv.id = 'mobile-error-box';
-        errDiv.style = 'padding:20px; color:red; background:#fff; position:fixed; top:0; left:0; width:100%; z-index:9999; border-bottom:2px solid red;';
-        document.body.appendChild(errDiv);
-      }
-      errDiv.innerHTML = '<h2>Error Detectado</h2><p>' + msg + '</p><p>Ver: ' + window.APP_VERSION + '</p>';
+      alert("ERROR: " + msg + "\nEn: " + url);
     };
 
     function forceFullReload() {
-      window.location.href = window.location.pathname + "?v=" + Date.now();
+      window.location.href = window.location.origin + window.location.pathname + "?v=" + Date.now();
     }
+
+    // 3. Watchdog: Si en 10s no ha cargado, avisar
+    setTimeout(function () {
+      if (!window.APP_INITIALIZED) {
+        var loaderText = document.getElementById('loader-status');
+        if (loaderText) {
+          loaderText.innerHTML = "Error de conexión o caché.<br><span style='font-size:12px;color:red;'>El archivo principal no responde.</span>";
+          document.getElementById('force-btn').style.display = 'block';
+        }
+      }
+    }, 10000);
   </script>
 </head>
 
 <body>
   <div id="root">
     <div
-      style="height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#1a0f12; color:#d4af37; font-family:sans-serif; text-align:center; padding: 20px;">
+      style="min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#1a0f12; color:#d4af37; font-family:sans-serif; text-align:center; padding: 20px; box-sizing: border-box;">
       <div
         style="width:40px; height:40px; border:3px solid #d4af37; border-top:3px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;">
       </div>
-      <p>Cargando invitación...</p>
-      <p style="font-size: 10px; opacity: 0.5; margin-top: 10px;">Versión: 1.4.3 - NoDependencies</p>
-      <button onclick="forceFullReload()"
-        style="margin-top: 20px; background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; border-radius: 4px; font-size: 12px; cursor: pointer;">
-        ¿No carga? Clic para forzar
-      </button>
+
+      <p id="loader-status" style="font-size: 18px; margin: 10px 0;">Cargando invitación...</p>
+
+      <div style="margin-top: 30px; padding: 15px; border: 1px dashed rgba(212, 175, 55, 0.3); border-radius: 8px;">
+        <p style="font-size: 10px; opacity: 0.6; margin-bottom: 10px;">Versión: 1.4.5 - ForceVite</p>
+        <button id="force-btn" onclick="forceFullReload()"
+          style="background: #d4af37; border: none; color: #1a0f12; padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+          FORZAR RECARGA
+        </button>
+      </div>
+
       <style>
         @keyframes spin {
           0% {
@@ -82,7 +91,8 @@
     </div>
   </div>
 
-  <script type="module" src="/src/main.tsx?v=1740000003"></script>
+  <!-- Vite Entry Point (Sin parámetros para que el build funcione) -->
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
