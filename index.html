@@ -19,6 +19,21 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@Lovable" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <script>
+    // 1. Force trailing slash (Critical for mobile GH Pages)
+    (function () {
+      var path = window.location.pathname;
+      if (path.endsWith('/ariadna-s-enchanted-xv')) {
+        window.location.replace(path + '/');
+      }
+    })();
+
+    // 2. Mobile Error Catcher
+    window.onerror = function (msg, url, line) {
+      alert("Error: " + msg + "\nIn: " + url + "\nLine: " + line);
+      return false;
+    };
+  </script>
 </head>
 
 <body>

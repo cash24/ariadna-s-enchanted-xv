@@ -18,6 +18,7 @@ const MusicPlayer = ({ autoPlay }: { autoPlay: boolean }) => {
     if (isPlaying) {
       audioRef.current.pause();
     } else {
+      audioRef.current.load();
       audioRef.current.volume = 0.3;
       audioRef.current.play();
     }
