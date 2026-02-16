@@ -29,52 +29,76 @@
   <meta http-equiv="Expires" content="0" />
 
   <script>
-    window.APP_VERSION = "1.4.5 - ForceVite";
-    window.APP_START_TIME = Date.now();
+    window.APP_VERSION = "1.4.6 - DebugSync";
+    window.log_buffer = [];
+    window.log = function (m) {
+      console.log(m);
+      window.log_buffer.push(m);
+      var d = document.getElementById('debug-log');
+      if (d) {
+        // Flush buffer
+        while (window.log_buffer.length > 0) {
+          var msg = window.log_buffer.shift();
+          d.innerHTML += "<div>> " + msg + "</div>";
+        }
+      }
+    }
+
+    log("Iniciando: " + window.APP_VERSION);
 
     // 1. Force trailing slash
-    if (window.location.pathname.endsWith('/ariadna-s-enchanted-xv')) {
+    if (window.location.pathname.match(/\/ariadna-s-enchanted-xv$/)) {
+      log("Ajustando slash...");
       window.location.replace(window.location.pathname + '/');
     }
 
-    // 2. Mobile Error Reporter
+    // 2. Global Error Reporter
     window.onerror = function (msg, url, line) {
-      alert("ERROR: " + msg + "\nEn: " + url);
+      var e = "ERR: " + msg + "\nL:" + line;
+      log(e);
+      alert(e);
     };
 
     function forceFullReload() {
-      window.location.href = window.location.origin + window.location.pathname + "?v=" + Date.now();
+      log("Limpiando...");
+      window.location.href = window.location.pathname + "?v=" + Date.now();
     }
 
-    // 3. Watchdog: Si en 10s no ha cargado, avisar
+    // 3. Watchdog
     setTimeout(function () {
       if (!window.APP_INITIALIZED) {
-        var loaderText = document.getElementById('loader-status');
-        if (loaderText) {
-          loaderText.innerHTML = "Error de conexión o caché.<br><span style='font-size:12px;color:red;'>El archivo principal no responde.</span>";
-          document.getElementById('force-btn').style.display = 'block';
-        }
+        log("WATCHDOG: Timeout");
+        var s = document.getElementById('loader-status');
+        if (s) s.innerHTML = "Error: La aplicación no responde.";
+      } else {
+        log("WATCHDOG: OK");
       }
-    }, 10000);
+    }, 12000);
   </script>
 </head>
 
 <body>
   <div id="root">
     <div
-      style="min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#1a0f12; color:#d4af37; font-family:sans-serif; text-align:center; padding: 20px; box-sizing: border-box;">
+      style="min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0a0f1a; color:#d4af37; font-family:sans-serif; text-align:center; padding: 20px; box-sizing: border-box;">
       <div
         style="width:40px; height:40px; border:3px solid #d4af37; border-top:3px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;">
       </div>
 
-      <p id="loader-status" style="font-size: 18px; margin: 10px 0;">Cargando invitación...</p>
+      <p id="loader-status" style="font-size: 18px; margin: 10px 0;">Cargando experiencia azul...</p>
 
-      <div style="margin-top: 30px; padding: 15px; border: 1px dashed rgba(212, 175, 55, 0.3); border-radius: 8px;">
-        <p style="font-size: 10px; opacity: 0.6; margin-bottom: 10px;">Versión: 1.4.5 - ForceVite</p>
+      <div
+        style="margin-top: 20px; padding: 10px; border: 1px dashed rgba(212, 175, 55, 0.3); border-radius: 8px; width: 100%; max-width: 300px;">
+        <p style="font-size: 10px; opacity: 0.6;">Versión: 1.4.6 - DebugSync</p>
         <button id="force-btn" onclick="forceFullReload()"
-          style="background: #d4af37; border: none; color: #1a0f12; padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+          style="background: #d4af37; border: none; color: #1a0f12; padding: 10px 20px; border-radius: 6px; font-size: 12px; font-weight: bold; cursor: pointer; margin-top: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
           FORZAR RECARGA
         </button>
+      </div>
+
+      <div id="debug-log"
+        style="margin-top:20px; font-size: 10px; color: #aaa; text-align: left; width: 100%; max-width: 300px; height: 100px; overflow-y: auto; background: rgba(0,0,0,0.5); padding: 5px; border: 1px solid #333;">
+        <div>Iniciando log...</div>
       </div>
 
       <style>
@@ -92,7 +116,7 @@
   </div>
 
   <!-- Vite Entry Point (Sin parámetros para que el build funcione) -->
-  <script type="module" src="/src/main.tsx"></script>
+  <script type="module" src="src/main.tsx"></script>
 </body>
 
 </html>
