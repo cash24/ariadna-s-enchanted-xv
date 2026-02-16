@@ -26,7 +26,9 @@ const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const guest = useMemo(() => getGuestData(invitationId), [invitationId]);
-  const eventUrl = typeof window !== "undefined" ? window.location.origin : "";
+  const eventUrl = typeof window !== "undefined"
+    ? window.location.origin + import.meta.env.BASE_URL
+    : "";
 
   if (!guest) {
     return (
@@ -60,7 +62,8 @@ const Index = () => {
           backgroundSize: "400px",
           backgroundRepeat: "repeat",
           backgroundBlendMode: "soft-light",
-          backgroundAttachment: "fixed",
+          // Disabled fixed attachment on mobile for performance
+          backgroundAttachment: typeof window !== "undefined" && window.innerWidth > 768 ? "fixed" : "scroll",
         }}
       >
         {/* Dark overlay on pattern */}
