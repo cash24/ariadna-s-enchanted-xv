@@ -28,11 +28,8 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
-  <!-- Eruda Mobile Console (No-bloqueante) -->
-  <script src="//cdn.jsdelivr.net/npm/eruda" async onload="eruda.init()"></script>
-
   <script>
-    window.APP_VERSION = "1.4.2 - DeepClean";
+    window.APP_VERSION = "1.4.3 - NoDependencies";
 
     // 1. Force trailing slash
     if (window.location.pathname.endsWith('/ariadna-s-enchanted-xv')) {
@@ -41,7 +38,7 @@
 
     // 2. Mobile Error Reporter (Global)
     window.onerror = function (msg, url, line) {
-      console.log("Error detectable: ", msg);
+      console.log("Error: ", msg);
       var errDiv = document.getElementById('mobile-error-box');
       if (!errDiv) {
         errDiv = document.createElement('div');
@@ -49,8 +46,12 @@
         errDiv.style = 'padding:20px; color:red; background:#fff; position:fixed; top:0; left:0; width:100%; z-index:9999; border-bottom:2px solid red;';
         document.body.appendChild(errDiv);
       }
-      errDiv.innerHTML = '<h2>Error Detectado</h2><p>' + msg + '</p><p>Line: ' + line + '</p><p>Ver: ' + window.APP_VERSION + '</p>';
+      errDiv.innerHTML = '<h2>Error Detectado</h2><p>' + msg + '</p><p>Ver: ' + window.APP_VERSION + '</p>';
     };
+
+    function forceFullReload() {
+      window.location.href = window.location.pathname + "?v=" + Date.now();
+    }
   </script>
 </head>
 
@@ -62,7 +63,11 @@
         style="width:40px; height:40px; border:3px solid #d4af37; border-top:3px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;">
       </div>
       <p>Cargando invitación...</p>
-      <p style="font-size: 10px; opacity: 0.5; margin-top: 10px;">Versión: 1.4.2 - DeepClean</p>
+      <p style="font-size: 10px; opacity: 0.5; margin-top: 10px;">Versión: 1.4.3 - NoDependencies</p>
+      <button onclick="forceFullReload()"
+        style="margin-top: 20px; background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 8px 16px; border-radius: 4px; font-size: 12px; cursor: pointer;">
+        ¿No carga? Clic para forzar
+      </button>
       <style>
         @keyframes spin {
           0% {
@@ -77,7 +82,7 @@
     </div>
   </div>
 
-  <script type="module" src="/src/main.tsx?v=1740000002"></script>
+  <script type="module" src="/src/main.tsx?v=1740000003"></script>
 </body>
 
 </html>
