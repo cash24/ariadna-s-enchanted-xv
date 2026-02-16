@@ -18,6 +18,15 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@Lovable" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <script>
+    // Force trailing slash for GitHub Pages to prevent path resolution issues on mobile
+    (function () {
+      var path = window.location.pathname;
+      if (path.endsWith('/ariadna-s-enchanted-xv')) {
+        window.location.replace(path + '/');
+      }
+    })();
+  </script>
 </head>
 
 <body>
