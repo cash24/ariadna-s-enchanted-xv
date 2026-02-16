@@ -54,9 +54,9 @@ const Index = () => {
 
       <motion.div
         className="relative"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
         animate={{ opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.5 }}
         style={{
           backgroundImage: `url(${patternBg})`,
           backgroundSize: "400px",

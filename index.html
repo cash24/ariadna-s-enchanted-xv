@@ -19,56 +19,13 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@Lovable" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <script>
-    // 1. Force trailing slash (Critical for mobile GH Pages)
-    if (window.location.pathname.endsWith('/ariadna-s-enchanted-xv')) {
-      window.location.replace(window.location.pathname + '/');
-    }
-
-    // 2. Kill all existing Service Workers (Safety for shared domain)
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function (registrations) {
-        for (let registration of registrations) { registration.unregister(); }
-      });
-    }
-
-    // 3. Clear Cache (Force fresh load)
-    if ('caches' in window) {
-      caches.keys().then(function (names) {
-        for (let name of names) caches.delete(name);
-      });
-    }
-
-    // 4. Visible Error reporting for mobile
-    window.onerror = function (msg, url, line) {
-      document.body.innerHTML = '<div style="padding: 20px; color: red; font-family: sans-serif;">' +
-        '<h2>Error de carga</h2>' +
-        '<p>' + msg + '</p>' +
-        '<p>Línea: ' + line + '</p>' +
-        '</div>';
-    };
-  </script>
 </head>
 
 <body>
   <div id="root">
     <div
-      style="height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#1a0f12; color:#d4af37; font-family:sans-serif; text-align:center; padding:20px;">
-      <div
-        style="width:40px; height:40px; border:3px solid #d4af37; border-top:3px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;">
-      </div>
-      <p>Cargando invitación de Ariadna...</p>
-      <style>
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-      </style>
+      style="height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#1a0f12; color:#d4af37; font-family:sans-serif; text-align:center;">
+      <p>Cargando invitación...</p>
     </div>
   </div>
   <script type="module" src="/src/main.tsx"></script>
