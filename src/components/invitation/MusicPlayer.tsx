@@ -6,19 +6,11 @@ const MusicPlayer = ({ autoPlay }: { autoPlay: boolean }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Beauty and the Beast instrumental - using a royalty-free music URL
-  const musicUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+  // Beauty and the Beast instrumental
+  const musicUrl = "https://cdn.pixabay.com/audio/2022/03/15/audio_7313a48e89.mp3";
 
   useEffect(() => {
-    if (autoPlay && audioRef.current) {
-      audioRef.current.volume = 0.3;
-      audioRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch(() => {
-        // Autoplay blocked by browser
-        setIsPlaying(false);
-      });
-    }
+    // We'll only play if the user interact, removing autoplay to prevent mobile blocking
   }, [autoPlay]);
 
   const togglePlay = () => {
@@ -34,7 +26,7 @@ const MusicPlayer = ({ autoPlay }: { autoPlay: boolean }) => {
 
   return (
     <>
-      <audio ref={audioRef} src={musicUrl} loop preload="auto" />
+      <audio ref={audioRef} src={musicUrl} loop preload="none" />
       <motion.button
         className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full golden-border bg-card/80 backdrop-blur-sm flex items-center justify-center text-gold transition-colors hover:bg-gold/10"
         onClick={togglePlay}
