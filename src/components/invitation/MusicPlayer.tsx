@@ -6,8 +6,8 @@ const MusicPlayer = ({ autoPlay }: { autoPlay: boolean }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Beauty and the Beast instrumental
-  const musicUrl = "https://cdn.pixabay.com/audio/2022/03/15/audio_7313a48e89.mp3";
+  // Localized music file in public folder
+  const musicUrl = `${import.meta.env.BASE_URL}music.mp3`;
 
   useEffect(() => {
     // We'll only play if the user interact, removing autoplay to prevent mobile blocking
