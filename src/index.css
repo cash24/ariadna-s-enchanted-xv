@@ -36,42 +36,44 @@
 
 @layer base {
   :root {
-    --background: 340 30% 8%;
+    --background: 220 40% 7%;
+    /* Azul Noche Profundo */
     --foreground: 40 50% 90%;
 
-    --card: 340 25% 12%;
+    --card: 220 35% 10%;
     --card-foreground: 40 50% 90%;
 
-    --popover: 340 25% 12%;
+    --popover: 220 35% 10%;
     --popover-foreground: 40 50% 90%;
 
     --primary: 43 72% 55%;
-    --primary-foreground: 340 30% 8%;
+    --primary-foreground: 220 40% 7%;
 
-    --secondary: 340 40% 18%;
+    --secondary: 220 40% 15%;
     --secondary-foreground: 40 50% 90%;
 
-    --muted: 340 20% 15%;
-    --muted-foreground: 40 20% 60%;
+    --muted: 220 20% 12%;
+    --muted-foreground: 220 15% 60%;
 
-    --accent: 0 65% 45%;
+    --accent: 43 60% 40%;
+    /* Oro obscuro */
     --accent-foreground: 40 50% 95%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 43 40% 25%;
-    --input: 340 20% 20%;
+    --input: 220 20% 15%;
     --ring: 43 72% 55%;
 
     --radius: 0.5rem;
 
     --gold: 43 72% 55%;
+    --gold-dark: 43 60% 30%;
     --gold-light: 43 80% 70%;
-    --burgundy: 340 50% 25%;
-    --burgundy-dark: 340 40% 12%;
+    --midnight: 220 40% 7%;
+    --midnight-light: 220 30% 15%;
     --cream: 40 50% 90%;
-    --rose-red: 0 65% 45%;
 
     --font-display: 'Great Vibes', cursive;
     --font-heading: 'Cinzel', serif;
@@ -229,6 +231,95 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+.ornate-frame-border {
+  border: 15px solid transparent;
+  border-image: linear-gradient(45deg, #d4af37, #8a6d3b, #f3e5ab, #d4af37) 1;
+  position: absolute;
+  inset: 10px;
+  z-index: 50;
+  pointer-events: none;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 50px rgba(212, 175, 55, 0.1);
+}
+
+.ornate-frame-border::before,
+.ornate-frame-border::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 10px #d4af37);
+  z-index: 51;
+  animation: sparkle 4s infinite ease-in-out;
+}
+
+/* Corner "Candelabro" shapes using gradients */
+.ornate-frame-border::before {
+  top: -30px;
+  left: -30px;
+  background: radial-gradient(circle at center, #f3e5ab 0%, #d4af37 40%, transparent 70%);
+  border-radius: 50% 0 50% 50%;
+}
+
+.ornate-frame-border::after {
+  top: -30px;
+  right: -30px;
+  background: radial-gradient(circle at center, #f3e5ab 0%, #d4af37 40%, transparent 70%);
+  border-radius: 0 50% 50% 50%;
+}
+
+.ornate-corner-bottom {
+  position: absolute;
+  bottom: -30px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at center, #f3e5ab 0%, #d4af37 40%, transparent 70%);
+  filter: drop-shadow(0 0 10px #d4af37);
+  z-index: 51;
+  animation: sparkle 4s infinite ease-in-out reverse;
+}
+
+.left-corner-bottom {
+  left: -30px;
+  border-radius: 50% 50% 50% 0;
+}
+
+.right-corner-bottom {
+  right: -30px;
+  border-radius: 50% 50% 0 50%;
+}
+
+@keyframes sparkle {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+@keyframes stars-twinkle {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-stars {
+  animation: stars-twinkle 5s infinite ease-in-out;
 }
 
 /* Custom scrollbar */

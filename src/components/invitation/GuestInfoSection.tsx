@@ -70,7 +70,7 @@ const GuestInfoSection = ({ guest, eventUrl }: { guest: GuestData; eventUrl: str
                 value={qrValue}
                 size={180}
                 bgColor="hsl(40, 50%, 90%)"
-                fgColor="hsl(340, 30%, 8%)"
+                fgColor="hsl(220, 40%, 7%)"
                 level="H"
                 includeMargin={false}
               />

@@ -95,7 +95,7 @@ const CoverSection = ({ guestName, onOpen }: { guestName: string; onOpen: () => 
           {[...Array(6)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute text-rose-red text-2xl"
+              className="absolute text-gold text-2xl"
               initial={{
                 x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 400),
                 y: -50,
@@ -114,7 +114,7 @@ const CoverSection = ({ guestName, onOpen }: { guestName: string; onOpen: () => 
                 ease: "linear",
               }}
             >
-              🌹
+              ✨
             </motion.div>
           ))}
         </motion.div>

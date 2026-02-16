@@ -26,7 +26,7 @@ const DressCodeSection = () => {
               icon: <Shirt className="w-8 h-8" />,
               title: "Código de Vestimenta",
               description: "Formal / Elegante",
-              note: "Colores sugeridos: Dorado, Burgundy, Rojo",
+              note: "Colores sugeridos: Dorado, Azul Noche, Plata",
             },
             {
               icon: <Camera className="w-8 h-8" />,

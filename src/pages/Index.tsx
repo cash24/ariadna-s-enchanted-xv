@@ -53,20 +53,26 @@ const Index = () => {
       {isOpen && <MusicPlayer autoPlay={true} />}
 
       <motion.div
-        className="relative"
+        className="relative overflow-hidden"
         initial={{ opacity: 1 }}
         animate={{ opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.5 }}
         style={{
-          backgroundImage: `url(${patternBg})`,
-          backgroundSize: "400px",
-          backgroundRepeat: "repeat",
-          backgroundBlendMode: "soft-light",
-          backgroundAttachment: "scroll",
+          background: "radial-gradient(circle at 50% 10%, #1a2a4a 0%, #0a0f1a 100%)",
+          backgroundAttachment: "fixed",
         }}
       >
-        {/* Dark overlay on pattern */}
-        <div className="relative" style={{ backgroundColor: "hsl(340 30% 8% / 0.92)" }}>
+        {/* Ornate Gold Frame Overlay */}
+        <div className="absolute inset-0 pointer-events-none z-50 ornate-frame-border">
+          <div className="ornate-corner-bottom left-corner-bottom" />
+          <div className="ornate-corner-bottom right-corner-bottom" />
+        </div>
+
+        {/* Stars / Dust Effect Overlay */}
+        <div className="absolute inset-0 pointer-events-none opacity-30"
+          style={{ backgroundImage: `url(${patternBg})`, backgroundSize: '400px', mixBlendMode: 'overlay' }} />
+
+        <div className="relative z-10">
           <CountdownSection />
           <SectionDivider />
           <EventDetailsSection />
