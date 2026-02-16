@@ -62,8 +62,7 @@ const Index = () => {
           backgroundSize: "400px",
           backgroundRepeat: "repeat",
           backgroundBlendMode: "soft-light",
-          // Disabled fixed attachment on mobile for performance
-          backgroundAttachment: typeof window !== "undefined" && window.innerWidth > 768 ? "fixed" : "scroll",
+          backgroundAttachment: "scroll",
         }}
       >
         {/* Dark overlay on pattern */}
