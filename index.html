@@ -25,17 +25,26 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
-  <!-- Fuentes Locales (Cargadas vía index.css) -->
+  <!-- Eruda Mobile Console (Bloqueante al inicio para diagnóstico inmediato) -->
+  <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+  <script>eruda.init();</script>
 
   <script>
-    window.APP_VERSION = "1.4.0 - ZeroExternal";
+    window.APP_VERSION = "1.4.1 - CacheDestroyer";
 
     // 1. Force trailing slash
     if (window.location.pathname.endsWith('/ariadna-s-enchanted-xv')) {
       window.location.replace(window.location.pathname + '/');
     }
 
-    // 2. Mobile Error Reporter (Global)
+    // 2. Cache Buster Agresivo
+    // Si entras sin el parámetro ?v=, te redirige una vez para forzar limpieza
+    if (!window.location.search.includes('v=')) {
+      var newUrl = window.location.href + (window.location.href.includes('?') ? '&' : '?') + 'v=' + Date.now();
+      window.location.replace(newUrl);
+    }
+
+    // 3. Mobile Error Reporter (Global)
     window.onerror = function (msg, url, line) {
       var errDiv = document.getElementById('mobile-error-box');
       if (!errDiv) {
@@ -57,7 +66,7 @@
         style="width:40px; height:40px; border:3px solid #d4af37; border-top:3px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;">
       </div>
       <p>Cargando invitación...</p>
-      <p style="font-size: 10px; opacity: 0.5; margin-top: 10px;">Versión: 1.4.0 - ZeroExternal</p>
+      <p style="font-size: 10px; opacity: 0.5; margin-top: 10px;">Versión: 1.4.1 - CacheDestroyer</p>
       <style>
         @keyframes spin {
           0% {
@@ -72,9 +81,7 @@
     </div>
   </div>
 
-  <!-- Scripts al final para no bloquear -->
-  <script src="//cdn.jsdelivr.net/npm/eruda" async onload="eruda.init()"></script>
-  <script type="module" src="/src/main.tsx?v=1740000000"></script>
+  <script type="module" src="/src/main.tsx?v=1740000002"></script>
 </body>
 
 </html>
