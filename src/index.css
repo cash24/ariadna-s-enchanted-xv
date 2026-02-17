@@ -234,61 +234,61 @@ html {
 }
 
 .ornate-frame-border {
-  border: 15px solid transparent;
+  border: 8px solid transparent;
   border-image: linear-gradient(45deg, #d4af37, #8a6d3b, #f3e5ab, #d4af37) 1;
   position: absolute;
-  inset: 10px;
+  inset: 4px;
   z-index: 50;
   pointer-events: none;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 50px rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(212, 175, 55, 0.05);
 }
 
 .ornate-frame-border::before,
 .ornate-frame-border::after {
   content: '';
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   background-size: contain;
   background-repeat: no-repeat;
-  filter: drop-shadow(0 0 10px #d4af37);
+  filter: drop-shadow(0 0 8px #d4af37);
   z-index: 51;
   animation: sparkle 4s infinite ease-in-out;
 }
 
 /* Corner "Candelabro" shapes using gradients */
 .ornate-frame-border::before {
-  top: -30px;
-  left: -30px;
+  top: -20px;
+  left: -20px;
   background: radial-gradient(circle at center, #f3e5ab 0%, #d4af37 40%, transparent 70%);
   border-radius: 50% 0 50% 50%;
 }
 
 .ornate-frame-border::after {
-  top: -30px;
-  right: -30px;
+  top: -20px;
+  right: -20px;
   background: radial-gradient(circle at center, #f3e5ab 0%, #d4af37 40%, transparent 70%);
   border-radius: 0 50% 50% 50%;
 }
 
 .ornate-corner-bottom {
   position: absolute;
-  bottom: -30px;
-  width: 80px;
-  height: 80px;
+  bottom: -20px;
+  width: 50px;
+  height: 50px;
   background: radial-gradient(circle at center, #f3e5ab 0%, #d4af37 40%, transparent 70%);
-  filter: drop-shadow(0 0 10px #d4af37);
+  filter: drop-shadow(0 0 8px #d4af37);
   z-index: 51;
   animation: sparkle 4s infinite ease-in-out reverse;
 }
 
 .left-corner-bottom {
-  left: -30px;
+  left: -20px;
   border-radius: 50% 50% 50% 0;
 }
 
 .right-corner-bottom {
-  right: -30px;
+  right: -20px;
   border-radius: 50% 50% 0 50%;
 }
 

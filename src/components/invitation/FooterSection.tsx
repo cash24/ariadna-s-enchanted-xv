@@ -19,7 +19,7 @@ const FooterSection = () => (
         Con amor, Ariadna ✨
       </p>
       <p className="text-[8px] text-gold/20 mt-4 uppercase tracking-widest">
-        Ver: 1.4.6 - DebugSync
+        Ver: 1.4.7 - NuclearSync
       </p>
     </motion.div>
   </footer>

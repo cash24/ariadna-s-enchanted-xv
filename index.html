@@ -29,14 +29,13 @@
   <meta http-equiv="Expires" content="0" />
 
   <script>
-    window.APP_VERSION = "1.4.6 - DebugSync";
+    window.APP_VERSION = "1.4.7 - NuclearSync";
     window.log_buffer = [];
     window.log = function (m) {
       console.log(m);
       window.log_buffer.push(m);
       var d = document.getElementById('debug-log');
       if (d) {
-        // Flush buffer
         while (window.log_buffer.length > 0) {
           var msg = window.log_buffer.shift();
           d.innerHTML += "<div>> " + msg + "</div>";
@@ -44,24 +43,24 @@
       }
     }
 
-    log("Iniciando: " + window.APP_VERSION);
+    log("Versión: " + window.APP_VERSION);
 
-    // 1. Force trailing slash
-    if (window.location.pathname.match(/\/ariadna-s-enchanted-xv$/)) {
-      log("Ajustando slash...");
-      window.location.replace(window.location.pathname + '/');
+    // 1. Force trailing slash AND CACHE BUST
+    if (!window.location.pathname.endsWith('/')) {
+      log("Ajustando URL...");
+      window.location.replace(window.location.pathname + '/?v=' + Date.now());
     }
 
     // 2. Global Error Reporter
     window.onerror = function (msg, url, line) {
-      var e = "ERR: " + msg + "\nL:" + line;
-      log(e);
-      alert(e);
+      log("ERR: " + msg + " (L:" + line + ")");
     };
 
     function forceFullReload() {
-      log("Limpiando...");
-      window.location.href = window.location.pathname + "?v=" + Date.now();
+      log("Nuclear Reload...");
+      var baseUrl = window.location.origin + window.location.pathname;
+      if (!baseUrl.endsWith('/')) baseUrl += '/';
+      window.location.href = baseUrl + "?v=" + Date.now() + "&nuclear=true";
     }
 
     // 3. Watchdog
@@ -69,11 +68,9 @@
       if (!window.APP_INITIALIZED) {
         log("WATCHDOG: Timeout");
         var s = document.getElementById('loader-status');
-        if (s) s.innerHTML = "Error: La aplicación no responde.";
-      } else {
-        log("WATCHDOG: OK");
+        if (s) s.innerHTML = "Error: El archivo JS no responde.<br>Pulsa Limpiar Caché.";
       }
-    }, 12000);
+    }, 15000);
   </script>
 </head>
 

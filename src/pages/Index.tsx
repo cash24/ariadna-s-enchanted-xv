@@ -58,8 +58,7 @@ const Index = () => {
         animate={{ opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.5 }}
         style={{
-          background: "radial-gradient(circle at 50% 10%, #1a2a4a 0%, #0a0f1a 100%)",
-          backgroundAttachment: "fixed",
+          background: "linear-gradient(to bottom, #1a2a4a, #0a0f1a)",
         }}
       >
         {/* Ornate Gold Frame Overlay */}
