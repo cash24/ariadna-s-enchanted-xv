@@ -18,9 +18,7 @@ const FooterSection = () => (
       <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold/40">
         Con amor, Ariadna ✨
       </p>
-      <p className="text-[8px] text-gold/20 mt-4 uppercase tracking-widest">
-        Ver: 1.5.1 - NuclearGuard
-      </p>
+
     </motion.div>
   </footer>
 );
