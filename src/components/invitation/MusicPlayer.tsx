@@ -2,62 +2,34 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
 
-const MusicPlayer = ({ autoPlay }: { autoPlay: boolean }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
+interface MusicPlayerProps {
+  isPlaying: boolean;
+  onToggle: (playing: boolean) => void;
+}
 
-  // Localized music file in public folder
+const MusicPlayer = ({ isPlaying, onToggle }: MusicPlayerProps) => {
+  const audioRef = useRef<HTMLAudioElement>(null);
   const musicUrl = `${import.meta.env.BASE_URL}music.mp3`;
 
   useEffect(() => {
-    if (autoPlay && audioRef.current) {
-      const audio = audioRef.current;
-
-      const attemptPlay = () => {
-        audio.play().then(() => {
-          setIsPlaying(true);
-          // Fade in
-          audio.volume = 0;
-          let vol = 0;
-          const fade = setInterval(() => {
-            if (vol < 0.4) {
-              vol += 0.05;
-              audio.volume = vol;
-            } else {
-              clearInterval(fade);
-            }
-          }, 200);
-        }).catch(err => {
-          console.log("Autoplay blocked, waiting for interaction", err);
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play().catch(err => {
+          console.log("Music play error:", err);
+          onToggle(false);
         });
-      };
-
-      if (audio.readyState >= 2) {
-        attemptPlay();
       } else {
-        audio.addEventListener('canplaythrough', attemptPlay, { once: true });
+        audioRef.current.pause();
       }
     }
-  }, [autoPlay]);
-
-  const togglePlay = () => {
-    if (!audioRef.current) return;
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.load();
-      audioRef.current.volume = 0.3;
-      audioRef.current.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
+  }, [isPlaying, onToggle]);
 
   return (
     <>
-      <audio ref={audioRef} src={musicUrl} loop preload="none" />
+      <audio ref={audioRef} src={musicUrl} loop preload="auto" />
       <motion.button
         className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full golden-border bg-card/80 backdrop-blur-sm flex items-center justify-center text-gold transition-colors hover:bg-gold/10"
-        onClick={togglePlay}
+        onClick={() => onToggle(!isPlaying)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, y: 20 }}

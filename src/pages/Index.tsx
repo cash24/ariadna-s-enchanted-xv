@@ -26,6 +26,7 @@ const Index = () => {
   const invitationId = searchParams.get("id") || "INV001";
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
   const guest = useMemo(() => getGuestData(invitationId), [invitationId]);
 
@@ -60,6 +61,7 @@ const Index = () => {
 
   const handleOpenInvitation = useCallback(() => {
     setIsOpen(true);
+    setIsMusicPlaying(true);
     // Give a small delay to let sections render then start scroll
     setTimeout(() => {
       setIsScrolling(true);
@@ -86,7 +88,7 @@ const Index = () => {
     <>
       <CoverSection guestName={guest.name} onOpen={handleOpenInvitation} />
 
-      {isOpen && <MusicPlayer autoPlay={true} />}
+      <MusicPlayer isPlaying={isMusicPlaying} onToggle={setIsMusicPlaying} />
 
       <motion.div
         id="invitation-content"

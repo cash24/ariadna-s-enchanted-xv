@@ -9,7 +9,7 @@ const EventDetailsSection = () => {
         <motion.img
           src={roseDivider}
           alt="Rosa decorativa"
-          className="w-20 h-20 mx-auto mb-8 object-cover rounded-full animate-float"
+          className="w-32 h-32 mx-auto mb-8 object-cover rounded-full animate-float"
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -54,16 +54,10 @@ const EventDetailsSection = () => {
           <div className="h-px w-16 gold-gradient mx-auto my-6" />
 
           <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
-            Madrina de Velación
+            Padrinos de Velación
           </p>
-          <p className="font-body text-xl text-cream mb-6">
+          <p className="font-body text-xl text-cream mb-2">
             {MADRINA_NAME}
-          </p>
-
-          <div className="h-px w-16 gold-gradient mx-auto my-6" />
-
-          <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
-            Padrino de Velación
           </p>
           <p className="font-body text-xl text-cream">
             {PADRINO_NAME}
