@@ -29,7 +29,7 @@
   <meta http-equiv="Expires" content="0" />
 
   <script>
-    window.APP_VERSION = "1.4.7 - NuclearSync";
+    window.APP_VERSION = "1.4.8 - UltimateSync";
     window.log_buffer = [];
     window.log = function (m) {
       console.log(m);
@@ -43,11 +43,11 @@
       }
     }
 
-    log("Versión: " + window.APP_VERSION);
+    log("Check: " + window.APP_VERSION);
 
     // 1. Force trailing slash AND CACHE BUST
     if (!window.location.pathname.endsWith('/')) {
-      log("Ajustando URL...");
+      log("Desfase de URL, corrigiendo...");
       window.location.replace(window.location.pathname + '/?v=' + Date.now());
     }
 
@@ -55,20 +55,23 @@
     window.onerror = function (msg, url, line) {
       log("ERR: " + msg + " (L:" + line + ")");
     };
+    window.onunhandledrejection = function (e) {
+      log("PROMISE ERR: " + e.reason);
+    };
 
     function forceFullReload() {
-      log("Nuclear Reload...");
+      log("Reiniciando Todo...");
       var baseUrl = window.location.origin + window.location.pathname;
       if (!baseUrl.endsWith('/')) baseUrl += '/';
-      window.location.href = baseUrl + "?v=" + Date.now() + "&nuclear=true";
+      window.location.href = baseUrl + "index.html?v=" + Date.now() + "&nuclear=true";
     }
 
     // 3. Watchdog
     setTimeout(function () {
       if (!window.APP_INITIALIZED) {
-        log("WATCHDOG: Timeout");
+        log("WATCHDOG: App no activa");
         var s = document.getElementById('loader-status');
-        if (s) s.innerHTML = "Error: El archivo JS no responde.<br>Pulsa Limpiar Caché.";
+        if (s) s.innerHTML = "<span style='color:#ff4444'>ERROR DE CARGA</span><br>El archivo de la app no responde.";
       }
     }, 15000);
   </script>
@@ -77,19 +80,19 @@
 <body>
   <div id="root">
     <div
-      style="min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0a0f1a; color:#d4af37; font-family:sans-serif; text-align:center; padding: 20px; box-sizing: border-box;">
+      style="min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0a0f1a; color:#f3e5ab; font-family:sans-serif; text-align:center; padding: 20px; box-sizing: border-box;">
       <div
         style="width:40px; height:40px; border:3px solid #d4af37; border-top:3px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;">
       </div>
 
-      <p id="loader-status" style="font-size: 18px; margin: 10px 0;">Cargando experiencia azul...</p>
+      <p id="loader-status" style="font-size: 18px; margin: 10px 0;">Sincronizando magia azul...</p>
 
       <div
-        style="margin-top: 20px; padding: 10px; border: 1px dashed rgba(212, 175, 55, 0.3); border-radius: 8px; width: 100%; max-width: 300px;">
-        <p style="font-size: 10px; opacity: 0.6;">Versión: 1.4.6 - DebugSync</p>
+        style="margin-top: 20px; padding: 15px; border: 1px dashed rgba(212, 175, 55, 0.4); border-radius: 8px; width: 100%; max-width: 320px; background: rgba(255,255,255,0.05);">
+        <p style="font-size: 10px; opacity: 0.7; margin-bottom: 5px;">Versión: 1.4.8 - UltimateSync</p>
         <button id="force-btn" onclick="forceFullReload()"
-          style="background: #d4af37; border: none; color: #1a0f12; padding: 10px 20px; border-radius: 6px; font-size: 12px; font-weight: bold; cursor: pointer; margin-top: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-          FORZAR RECARGA
+          style="background: #d4af37; border: none; color: #0a0f1a; padding: 12px 24px; border-radius: 6px; font-size: 13px; font-weight: bold; cursor: pointer; width: 100%; box-shadow: 0 4px 15px rgba(212,175,55,0.2);">
+          LIMPIAR CACHÉ Y REINTENTAR
         </button>
       </div>
 
