@@ -1,6 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import CoverSection from "@/components/invitation/CoverSection";
 import CountdownSection from "@/components/invitation/CountdownSection";
 import EventDetailsSection from "@/components/invitation/EventDetailsSection";
@@ -9,6 +9,7 @@ import GuestInfoSection from "@/components/invitation/GuestInfoSection";
 import DressCodeSection from "@/components/invitation/DressCodeSection";
 import FooterSection from "@/components/invitation/FooterSection";
 import MusicPlayer from "@/components/invitation/MusicPlayer";
+import ConfirmationSection from "@/components/invitation/ConfirmationSection";
 import { getGuestData } from "@/data/eventData";
 import patternBg from "@/assets/pattern-bg.jpg";
 
@@ -24,11 +25,46 @@ const Index = () => {
   const [searchParams] = useSearchParams();
   const invitationId = searchParams.get("id") || "INV001";
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const guest = useMemo(() => getGuestData(invitationId), [invitationId]);
+
   const eventUrl = typeof window !== "undefined"
     ? window.location.origin + import.meta.env.BASE_URL
     : "";
+
+  // Auto-scroll logic (velocity 20)
+  useEffect(() => {
+    let scrollInterval: any;
+    if (isScrolling) {
+      scrollInterval = setInterval(() => {
+        window.scrollBy({ top: 1, behavior: 'auto' });
+
+        // Stop if at bottom
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          setIsScrolling(false);
+        }
+      }, 50); // 1px every 50ms = approx 20px per second (Velocity 20)
+    }
+
+    const stopScroll = () => setIsScrolling(false);
+    window.addEventListener('touchstart', stopScroll);
+    window.addEventListener('wheel', stopScroll);
+
+    return () => {
+      clearInterval(scrollInterval);
+      window.removeEventListener('touchstart', stopScroll);
+      window.removeEventListener('wheel', stopScroll);
+    };
+  }, [isScrolling]);
+
+  const handleOpenInvitation = useCallback(() => {
+    setIsOpen(true);
+    // Give a small delay to let sections render then start scroll
+    setTimeout(() => {
+      setIsScrolling(true);
+    }, 1000);
+  }, []);
 
   if (!guest) {
     return (
@@ -39,7 +75,7 @@ const Index = () => {
             El ID de invitación "<span className="text-gold">{invitationId}</span>" no es válido.
           </p>
           <p className="font-body text-sm text-muted-foreground mt-4">
-            IDs de ejemplo: INV001, INV002, INV003, INV004, INV005
+            Ejemplos: INV001, FAM002, AMI003, GEN004
           </p>
         </div>
       </div>
@@ -48,15 +84,16 @@ const Index = () => {
 
   return (
     <>
-      <CoverSection guestName={guest.name} onOpen={() => setIsOpen(true)} />
+      <CoverSection guestName={guest.name} onOpen={handleOpenInvitation} />
 
       {isOpen && <MusicPlayer autoPlay={true} />}
 
       <motion.div
+        id="invitation-content"
         className="relative overflow-hidden"
-        initial={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
         animate={{ opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         style={{
           background: "linear-gradient(to bottom, #1a2a4a, #0a0f1a)",
         }}
@@ -81,6 +118,8 @@ const Index = () => {
           <GuestInfoSection guest={guest} eventUrl={eventUrl} />
           <SectionDivider />
           <DressCodeSection />
+          <SectionDivider />
+          <ConfirmationSection />
           <SectionDivider />
           <FooterSection />
         </div>

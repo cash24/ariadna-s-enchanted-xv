@@ -38,7 +38,7 @@ const GuestInfoSection = ({ guest, eventUrl }: { guest: GuestData; eventUrl: str
           <h3 className="font-display text-4xl text-gold mb-8">{guest.name}</h3>
 
           {/* Info cards */}
-          <div className="grid grid-cols-3 gap-4 mb-10">
+          <div className="grid grid-cols-2 gap-4 mb-10">
             <div className="flex flex-col items-center gap-2 p-4 rounded-xl bg-secondary/50">
               <Hash className="w-5 h-5 text-gold" />
               <span className="font-heading text-xs uppercase tracking-wider text-gold-light">Mesa</span>
@@ -48,11 +48,6 @@ const GuestInfoSection = ({ guest, eventUrl }: { guest: GuestData; eventUrl: str
               <Ticket className="w-5 h-5 text-gold" />
               <span className="font-heading text-xs uppercase tracking-wider text-gold-light">Boletos</span>
               <span className="font-heading text-2xl text-gold font-bold">{guest.tickets}</span>
-            </div>
-            <div className="flex flex-col items-center gap-2 p-4 rounded-xl bg-secondary/50">
-              <Users className="w-5 h-5 text-gold" />
-              <span className="font-heading text-xs uppercase tracking-wider text-gold-light">Pases</span>
-              <span className="font-heading text-2xl text-gold font-bold">{guest.companions.length + 1}</span>
             </div>
           </div>
 

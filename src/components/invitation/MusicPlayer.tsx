@@ -10,7 +10,26 @@ const MusicPlayer = ({ autoPlay }: { autoPlay: boolean }) => {
   const musicUrl = `${import.meta.env.BASE_URL}music.mp3`;
 
   useEffect(() => {
-    // We'll only play if the user interact, removing autoplay to prevent mobile blocking
+    if (autoPlay && audioRef.current && !isPlaying) {
+      const playPromise = audioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          setIsPlaying(true);
+          audioRef.current!.volume = 0;
+          let vol = 0;
+          const interval = setInterval(() => {
+            if (vol < 0.3) {
+              vol += 0.05;
+              audioRef.current!.volume = vol;
+            } else {
+              clearInterval(interval);
+            }
+          }, 200);
+        }).catch(error => {
+          console.log("Autoplay prevented:", error);
+        });
+      }
+    }
   }, [autoPlay]);
 
   const togglePlay = () => {

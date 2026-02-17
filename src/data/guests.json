@@ -1,0 +1,26 @@
+[
+    {
+        "idInvitado": "INV001",
+        "nombre": "Familia Urbina García",
+        "mesa": 1,
+        "boletos": 4
+    },
+    {
+        "idInvitado": "FAM002",
+        "nombre": "Sr. José Urbina",
+        "mesa": 1,
+        "boletos": 2
+    },
+    {
+        "idInvitado": "AMI003",
+        "nombre": "Magda Urbina & Familia",
+        "mesa": 2,
+        "boletos": 5
+    },
+    {
+        "idInvitado": "GEN004",
+        "nombre": "Invitado Especial",
+        "mesa": 10,
+        "boletos": 1
+    }
+]

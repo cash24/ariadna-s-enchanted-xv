@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import roseDivider from "@/assets/rose-divider.png";
+import { FATHER_NAME, MADRINA_NAME } from "@/data/eventData";
 
 const EventDetailsSection = () => {
   return (
@@ -31,11 +32,11 @@ const EventDetailsSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          Y con el amor de mis padres, tengo el honor de invitarte a celebrar conmigo
+          Y con el amor de mi padre, tengo el honor de invitarte a celebrar conmigo
           este día tan especial en el que cumplo mis XV años.
         </motion.p>
 
-        {/* Parents */}
+        {/* Family */}
         <motion.div
           className="golden-border rounded-2xl p-8 bg-card/50 backdrop-blur-sm max-w-lg mx-auto"
           initial={{ opacity: 0, y: 30 }}
@@ -44,17 +45,19 @@ const EventDetailsSection = () => {
           transition={{ delay: 0.4 }}
         >
           <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
-            Mis Padres
+            Mi Padre
           </p>
-          <p className="font-body text-xl text-cream">
-            Sr. Roberto & Sra. María Elena
+          <p className="font-body text-xl text-cream mb-6">
+            {FATHER_NAME}
           </p>
-          <div className="h-px w-16 gold-gradient mx-auto my-4" />
+
+          <div className="h-px w-16 gold-gradient mx-auto my-6" />
+
           <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
-            Mis Padrinos
+            Madrina de Velación
           </p>
           <p className="font-body text-xl text-cream">
-            Sr. Juan & Sra. Patricia
+            {MADRINA_NAME}
           </p>
         </motion.div>
       </div>

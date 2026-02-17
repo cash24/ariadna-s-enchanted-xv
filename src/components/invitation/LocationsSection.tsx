@@ -29,27 +29,28 @@ const LocationCard = ({ icon, title, name, address, time, mapUrl, delay = 0 }: L
     viewport={{ once: true }}
     transition={{ delay, duration: 0.6 }}
   >
-    <div className="p-6 text-center">
+    <div className="p-6 text-center space-y-4">
       <div className="flex items-center justify-center gap-2 mb-2">
         {icon}
         <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light">{title}</p>
       </div>
-      <h3 className="font-heading text-lg text-gold mb-1">{name}</h3>
-      <p className="font-body text-sm text-cream/70 mb-2">{address}</p>
-      <div className="flex items-center justify-center gap-2 text-gold-light">
-        <Clock className="w-4 h-4" />
-        <span className="font-heading text-sm">{time}</span>
+      <h3 className="font-heading text-2xl text-gold mb-1">{name}</h3>
+      <p className="font-body text-base text-cream/70 mb-4">{address}</p>
+      <div className="flex items-center justify-center gap-2 text-gold-light mb-6">
+        <Clock className="w-5 h-5" />
+        <span className="font-heading text-lg">{time}</span>
       </div>
-    </div>
-    <div className="w-full h-48">
-      <iframe
-        src={mapUrl}
-        className="w-full h-full border-0 opacity-70 grayscale contrast-125"
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title={`Mapa de ${name}`}
-      />
+
+      <motion.a
+        href={mapUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block w-full py-4 rounded-xl bg-gold/10 border border-gold/30 text-gold font-heading text-xs uppercase tracking-widest hover:bg-gold hover:text-midnight transition-all"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        Ver Ubicación en Maps
+      </motion.a>
     </div>
   </motion.div>
 );

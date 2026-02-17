@@ -92,7 +92,7 @@ const CoverSection = ({ guestName, onOpen }: { guestName: string; onOpen: () => 
           </motion.div>
 
           {/* Floating petals */}
-          {[...Array(6)].map((_, i) => (
+          {[...Array(40)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute text-gold text-2xl"
@@ -110,7 +110,7 @@ const CoverSection = ({ guestName, onOpen }: { guestName: string; onOpen: () => 
               transition={{
                 duration: 6 + Math.random() * 4,
                 repeat: Infinity,
-                delay: i * 1.5,
+                delay: i * 0.8,
                 ease: "linear",
               }}
             >
