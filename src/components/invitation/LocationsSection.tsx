@@ -40,16 +40,26 @@ const LocationCard = ({ icon, title, name, address, time, mapUrl, delay = 0 }: L
         <Clock className="w-5 h-5" />
         <span className="font-heading text-lg">{time}</span>
       </div>
+    </div>
 
+    <div className="w-full h-48 relative group">
+      <iframe
+        src={`https://www.google.com/maps/embed/v1/place?key=REPLACE_WITH_KEY&q=${encodeURIComponent(address)}`}
+        className="w-full h-full border-0 opacity-70 grayscale contrast-125"
+        allowFullScreen
+        loading="lazy"
+        title={`Mapa de ${name}`}
+      />
+      <div className="absolute inset-0 bg-gold/5 group-hover:bg-transparent transition-colors pointer-events-none" />
       <motion.a
         href={mapUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block w-full py-4 rounded-xl bg-gold/10 border border-gold/30 text-gold font-heading text-xs uppercase tracking-widest hover:bg-gold hover:text-midnight transition-all"
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full bg-gold text-midnight font-heading text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-30 shadow-lg"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
-        Ver Ubicación en Maps
+        Ver Mapa Real
       </motion.a>
     </div>
   </motion.div>

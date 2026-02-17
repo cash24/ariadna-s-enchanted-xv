@@ -32,7 +32,7 @@ const ConfirmationSection = () => {
 
                 <motion.button
                     onClick={handleConfirm}
-                    className="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-heading text-lg uppercase tracking-widest shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-105 transition-transform"
+                    className="inline-flex items-center gap-2 border border-[#25D366] text-[#25D366] px-6 py-2 rounded-full font-heading text-sm uppercase tracking-widest hover:bg-[#25D366] hover:text-white transition-all shadow-sm"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -40,8 +40,8 @@ const ConfirmationSection = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4 }}
                 >
-                    <MessageCircle className="w-6 h-6 fill-current" />
-                    Confirmar por WhatsApp
+                    <MessageCircle className="w-4 h-4 fill-current" />
+                    Confirmar Asistencia
                 </motion.button>
             </div>
         </section>

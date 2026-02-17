@@ -10,24 +10,32 @@ const MusicPlayer = ({ autoPlay }: { autoPlay: boolean }) => {
   const musicUrl = `${import.meta.env.BASE_URL}music.mp3`;
 
   useEffect(() => {
-    if (autoPlay && audioRef.current && !isPlaying) {
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
+    if (autoPlay && audioRef.current) {
+      const audio = audioRef.current;
+
+      const attemptPlay = () => {
+        audio.play().then(() => {
           setIsPlaying(true);
-          audioRef.current!.volume = 0;
+          // Fade in
+          audio.volume = 0;
           let vol = 0;
-          const interval = setInterval(() => {
-            if (vol < 0.3) {
+          const fade = setInterval(() => {
+            if (vol < 0.4) {
               vol += 0.05;
-              audioRef.current!.volume = vol;
+              audio.volume = vol;
             } else {
-              clearInterval(interval);
+              clearInterval(fade);
             }
           }, 200);
-        }).catch(error => {
-          console.log("Autoplay prevented:", error);
+        }).catch(err => {
+          console.log("Autoplay blocked, waiting for interaction", err);
         });
+      };
+
+      if (audio.readyState >= 2) {
+        attemptPlay();
+      } else {
+        audio.addEventListener('canplaythrough', attemptPlay, { once: true });
       }
     }
   }, [autoPlay]);

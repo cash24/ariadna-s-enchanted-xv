@@ -70,7 +70,7 @@ const CountdownSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
         >
-          20 de Junio, 2026
+          {EVENT_DATE.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
         </motion.p>
       </div>
     </section>

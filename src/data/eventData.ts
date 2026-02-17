@@ -21,7 +21,7 @@ export const getGuestData = (invitationId: string): GuestData | null => {
   };
 };
 
-export const EVENT_DATE = new Date("2025-04-25T18:00:00");
+export const EVENT_DATE = new Date("2026-04-25T18:00:00");
 export const CHURCH_NAME = "Parroquia Cristo Rey";
 export const CHURCH_ADDRESS = "Cda. de Jesus Maria 10, Amp. el Paraíso, 09230 Ciudad de México, CDMX";
 export const CHURCH_MAP_URL = "https://www.google.com.mx/maps/place/Parroquia+Cristo+Rey/@19.421892,-99.0348829,21z/data=!4m6!3m5!1s0x85d1fd0024156b89:0xa988babb6494ebf!8m2!3d19.421908!4d-99.0348772!16s%2Fg%2F11yc2jdljl";
