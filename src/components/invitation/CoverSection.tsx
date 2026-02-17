@@ -40,7 +40,7 @@ const CoverSection = ({ guestName, onOpen }: { guestName: string; onOpen: () => 
             </motion.p>
 
             <motion.h1
-              className="font-display text-7xl md:text-9xl gold-text-gradient"
+              className="font-display text-7xl md:text-9xl gold-text-gradient gold-glow"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 1 }}

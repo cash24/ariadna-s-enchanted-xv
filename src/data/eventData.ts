@@ -32,4 +32,5 @@ export const CEREMONY_TIME = "6:00 PM";
 export const RECEPTION_TIME = "8:30 PM";
 export const FATHER_NAME = "José Miguel Urbina Juan";
 export const MADRINA_NAME = "Magda Elizabeth Urbina Juan";
+export const PADRINO_NAME = "Eduardo Septimo Camela";
 export const WHATSAPP_CONFIRM = "+525625408998";

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import roseDivider from "@/assets/rose-divider.png";
-import { FATHER_NAME, MADRINA_NAME } from "@/data/eventData";
+import { FATHER_NAME, MADRINA_NAME, PADRINO_NAME } from "@/data/eventData";
 
 const EventDetailsSection = () => {
   return (
@@ -17,7 +17,7 @@ const EventDetailsSection = () => {
         />
 
         <motion.h2
-          className="font-display text-5xl md:text-6xl text-gold mb-4"
+          className="font-display text-5xl md:text-6xl text-gold mb-4 gold-glow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -56,8 +56,17 @@ const EventDetailsSection = () => {
           <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
             Madrina de Velación
           </p>
-          <p className="font-body text-xl text-cream">
+          <p className="font-body text-xl text-cream mb-6">
             {MADRINA_NAME}
+          </p>
+
+          <div className="h-px w-16 gold-gradient mx-auto my-6" />
+
+          <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
+            Padrino de Velación
+          </p>
+          <p className="font-body text-xl text-cream">
+            {PADRINO_NAME}
           </p>
         </motion.div>
       </div>

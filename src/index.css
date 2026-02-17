@@ -148,6 +148,10 @@
     background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)));
   }
 
+  .gold-glow {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  }
+
   .gold-text-gradient {
     background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-light)));
     -webkit-background-clip: text;

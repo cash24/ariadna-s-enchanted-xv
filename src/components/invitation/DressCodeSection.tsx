@@ -6,7 +6,7 @@ const DressCodeSection = () => {
     <section className="relative py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
-          className="font-display text-5xl md:text-6xl text-gold mb-4"
+          className="font-display text-5xl md:text-6xl text-gold mb-4 gold-glow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -26,7 +26,7 @@ const DressCodeSection = () => {
               icon: <Shirt className="w-8 h-8" />,
               title: "Código de Vestimenta",
               description: "Formal / Elegante",
-              note: "Colores sugeridos: Dorado, Azul Noche, Plata",
+              note: "Nota: El color dorado está reservado para la quinceañera",
             },
             {
               icon: <Camera className="w-8 h-8" />,
@@ -38,7 +38,7 @@ const DressCodeSection = () => {
               icon: <Gift className="w-8 h-8" />,
               title: "Mesa de Regalos",
               description: "Tu presencia es el mejor regalo",
-              note: "Si deseas obsequiar algo, lluvia de sobres 💌",
+              note: "Si deseas obsequiar algo, sugerimos lluvia de sobres 💌",
             },
           ].map((item, i) => (
             <motion.div

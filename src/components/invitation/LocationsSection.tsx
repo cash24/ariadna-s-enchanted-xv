@@ -44,7 +44,7 @@ const LocationCard = ({ icon, title, name, address, time, mapUrl, delay = 0 }: L
 
     <div className="w-full h-48 relative group">
       <iframe
-        src={`https://www.google.com/maps/embed/v1/place?key=REPLACE_WITH_KEY&q=${encodeURIComponent(address)}`}
+        src={`https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`}
         className="w-full h-full border-0 opacity-70 grayscale contrast-125"
         allowFullScreen
         loading="lazy"
@@ -70,7 +70,7 @@ const LocationsSection = () => {
     <section className="relative py-20 px-4">
       <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="font-display text-5xl md:text-6xl text-gold text-center mb-4"
+          className="font-display text-5xl md:text-6xl text-gold text-center mb-4 gold-glow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
