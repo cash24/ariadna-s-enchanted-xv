@@ -29,49 +29,27 @@
   <meta http-equiv="Expires" content="0" />
 
   <script>
-    window.APP_VERSION = "1.4.8 - UltimateSync";
-    window.log_buffer = [];
-    window.log = function (m) {
-      console.log(m);
-      window.log_buffer.push(m);
-      var d = document.getElementById('debug-log');
-      if (d) {
-        while (window.log_buffer.length > 0) {
-          var msg = window.log_buffer.shift();
-          d.innerHTML += "<div>> " + msg + "</div>";
-        }
-      }
-    }
+    window.APP_VERSION = "1.5.0 - Enchanted";
 
-    log("Check: " + window.APP_VERSION);
-
-    // 1. Force trailing slash AND CACHE BUST
+    // 1. Force trailing slash for GH Pages compatibility
     if (!window.location.pathname.endsWith('/')) {
-      log("Desfase de URL, corrigiendo...");
       window.location.replace(window.location.pathname + '/?v=' + Date.now());
     }
 
-    // 2. Global Error Reporter
-    window.onerror = function (msg, url, line) {
-      log("ERR: " + msg + " (L:" + line + ")");
-    };
-    window.onunhandledrejection = function (e) {
-      log("PROMISE ERR: " + e.reason);
-    };
-
     function forceFullReload() {
-      log("Reiniciando Todo...");
       var baseUrl = window.location.origin + window.location.pathname;
       if (!baseUrl.endsWith('/')) baseUrl += '/';
-      window.location.href = baseUrl + "index.html?v=" + Date.now() + "&nuclear=true";
+      window.location.href = baseUrl + "index.html?v=" + Date.now();
     }
 
-    // 3. Watchdog
+    // 2. Error handling (silent in production)
+    window.onerror = function () { return true; };
+
+    // 3. Simple watchdog to show reload button only if it hangs badly
     setTimeout(function () {
       if (!window.APP_INITIALIZED) {
-        log("WATCHDOG: App no activa");
-        var s = document.getElementById('loader-status');
-        if (s) s.innerHTML = "<span style='color:#ff4444'>ERROR DE CARGA</span><br>El archivo de la app no responde.";
+        var btn = document.getElementById('force-btn-container');
+        if (btn) btn.style.display = 'block';
       }
     }, 15000);
   </script>
@@ -85,20 +63,15 @@
         style="width:40px; height:40px; border:3px solid #d4af37; border-top:3px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:20px;">
       </div>
 
-      <p id="loader-status" style="font-size: 18px; margin: 10px 0;">Sincronizando magia azul...</p>
+      <p style="font-size: 18px; font-family: 'Great Vibes', cursive; color: #d4af37;">Cargando Magia...</p>
 
-      <div
-        style="margin-top: 20px; padding: 15px; border: 1px dashed rgba(212, 175, 55, 0.4); border-radius: 8px; width: 100%; max-width: 320px; background: rgba(255,255,255,0.05);">
-        <p style="font-size: 10px; opacity: 0.7; margin-bottom: 5px;">Versión: 1.4.8 - UltimateSync</p>
-        <button id="force-btn" onclick="forceFullReload()"
-          style="background: #d4af37; border: none; color: #0a0f1a; padding: 12px 24px; border-radius: 6px; font-size: 13px; font-weight: bold; cursor: pointer; width: 100%; box-shadow: 0 4px 15px rgba(212,175,55,0.2);">
-          LIMPIAR CACHÉ Y REINTENTAR
+      <div id="force-btn-container"
+        style="display:none; margin-top: 30px; padding: 15px; border: 1px dashed rgba(212, 175, 55, 0.4); border-radius: 8px;">
+        <p style="font-size: 12px; color: #f3e5ab; margin-bottom: 10px;">¿Demora mucho?</p>
+        <button onclick="forceFullReload()"
+          style="background: #d4af37; border: none; color: #0a0f1a; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">
+          LIMPIAR CACHÉ
         </button>
-      </div>
-
-      <div id="debug-log"
-        style="margin-top:20px; font-size: 10px; color: #aaa; text-align: left; width: 100%; max-width: 300px; height: 100px; overflow-y: auto; background: rgba(0,0,0,0.5); padding: 5px; border: 1px solid #333;">
-        <div>Iniciando log...</div>
       </div>
 
       <style>
