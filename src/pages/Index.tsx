@@ -114,7 +114,7 @@ const Index = () => {
         <div className="relative z-10 pt-8">
           {/* Header Section */}
           <motion.div
-            className="flex flex-col items-center text-center px-4 mb-12"
+            className="flex flex-col items-center text-center px-4 mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -14,9 +14,8 @@ const FooterSection = () => (
       <p className="font-body text-cream/60 italic text-lg mb-8">
         “Un día mágico, un vestido soñado y personas especiales como tú.”
       </p>
-      <div className="h-px w-24 gold-gradient mx-auto mb-4" />
-      <p className="font-display text-4xl text-gold gold-glow">
-        Con amor, <br /> Ariadna ✨
+      <p className="font-display text-3xl md:text-4xl text-gold gold-glow">
+        Con amor, Ariadna ✨
       </p>
 
     </motion.div>
