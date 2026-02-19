@@ -91,26 +91,26 @@ const CoverSection = ({ guestName, onOpen }: { guestName: string; onOpen: () => 
             </motion.button>
           </motion.div>
 
-          {/* Floating petals */}
-          {[...Array(40)].map((_, i) => (
+          {/* Centered falling stars */}
+          {[...Array(30)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute text-gold text-2xl"
+              className="absolute text-gold text-2xl z-20 pointer-events-none"
               initial={{
-                x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 400),
-                y: -50,
+                x: "calc(50% + " + (Math.random() * 200 - 100) + "px)",
+                y: -100,
                 rotate: 0,
-                opacity: 0.7,
-              }}
-              animate={{
-                y: typeof window !== "undefined" ? window.innerHeight + 50 : 900,
-                rotate: 720,
                 opacity: 0,
               }}
+              animate={{
+                y: "110vh",
+                rotate: 360,
+                opacity: [0, 0.8, 0.8, 0],
+              }}
               transition={{
-                duration: 6 + Math.random() * 4,
+                duration: 4 + Math.random() * 3,
                 repeat: Infinity,
-                delay: i * 0.8,
+                delay: i * 0.4,
                 ease: "linear",
               }}
             >

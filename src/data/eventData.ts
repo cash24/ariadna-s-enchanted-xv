@@ -29,7 +29,7 @@ export const VENUE_NAME = "Salon Michel Plus";
 export const VENUE_ADDRESS = "C. Pichirilo 53, Benito Juárez, 57000 Cdad. Nezahualcóyotl, Méx.";
 export const VENUE_MAP_URL = "https://www.google.com.mx/maps/place/Salon+Michel+Plus/@19.4074453,-99.0223017,19.13z/data=!3m1!5s0x85d1fccf0d207ee9:0xace12f7a42b1117!4m6!3m5!1s0x85d1fccf732b880f:0xd76dff72751ab053!8m2!3d19.407092!4d-99.0225207!16s%2Fg%2F11cms66xmt";
 export const CEREMONY_TIME = "6:00 PM";
-export const RECEPTION_TIME = "8:30 PM";
+export const RECEPTION_TIME = "7:30 PM";
 export const FATHER_NAME = "José Miguel Urbina Juan";
 export const MADRINA_NAME = "Magda Elizabeth Urbina Juan";
 export const PADRINO_NAME = "Eduardo Septimo Camela";

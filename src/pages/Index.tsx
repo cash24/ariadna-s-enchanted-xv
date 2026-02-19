@@ -12,6 +12,7 @@ import MusicPlayer from "@/components/invitation/MusicPlayer";
 import ConfirmationSection from "@/components/invitation/ConfirmationSection";
 import { getGuestData } from "@/data/eventData";
 import patternBg from "@/assets/pattern-bg.jpg";
+import roseDivider from "@/assets/rose-divider.png";
 
 const SectionDivider = () => (
   <div className="flex items-center justify-center py-4">
@@ -110,10 +111,44 @@ const Index = () => {
         <div className="absolute inset-0 pointer-events-none opacity-30"
           style={{ backgroundImage: `url(${patternBg})`, backgroundSize: '400px', mixBlendMode: 'overlay' }} />
 
-        <div className="relative z-10">
-          <CountdownSection />
-          <SectionDivider />
+        <div className="relative z-10 pt-16">
+          {/* Header Section */}
+          <motion.div
+            className="flex flex-col items-center text-center px-4 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="font-heading text-sm uppercase tracking-[0.4em] text-gold-light mb-2">
+              Mis XV
+            </p>
+            <h2 className="font-display text-7xl md:text-8xl gold-text-gradient gold-glow mb-2">
+              Ariadna
+            </h2>
+            <p className="font-heading text-lg text-cream mb-6">
+              25 de abril de 2026
+            </p>
+
+            <motion.img
+              src={roseDivider}
+              alt="Rosa decorativa"
+              className="w-24 h-24 object-cover rounded-full animate-float mb-8"
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            />
+
+            <h3 className="font-display text-4xl md:text-5xl text-gold gold-glow">
+              Con la bendición de Dios
+            </h3>
+          </motion.div>
+
+          {/* New Order: EventDetails (Family) -> Countdown (Faltan) -> Locations */}
           <EventDetailsSection />
+          <SectionDivider />
+          <CountdownSection />
           <SectionDivider />
           <LocationsSection />
           <SectionDivider />
