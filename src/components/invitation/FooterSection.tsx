@@ -12,11 +12,11 @@ const FooterSection = () => (
         ¡Te esperamos!
       </p>
       <p className="font-body text-cream/60 italic text-lg mb-8">
-        "Hay algo dulce y casi tan viejo como el tiempo..."
+        “Un día mágico, un vestido soñado y personas especiales como tú.”
       </p>
       <div className="h-px w-24 gold-gradient mx-auto mb-4" />
-      <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold/40">
-        Con amor, Ariadna ✨
+      <p className="font-display text-4xl text-gold gold-glow">
+        Con amor, <br /> Ariadna ✨
       </p>
 
     </motion.div>

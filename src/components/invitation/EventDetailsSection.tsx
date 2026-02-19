@@ -4,7 +4,7 @@ import { FATHER_NAME, MADRINA_NAME, PADRINO_NAME } from "@/data/eventData";
 
 const EventDetailsSection = () => {
   return (
-    <section className="relative py-20 px-4">
+    <section className="relative pt-10 pb-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <div className="pt-2"></div>
 

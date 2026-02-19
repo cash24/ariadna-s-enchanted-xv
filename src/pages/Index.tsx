@@ -15,7 +15,7 @@ import patternBg from "@/assets/pattern-bg.jpg";
 import roseDivider from "@/assets/rose-divider.png";
 
 const SectionDivider = () => (
-  <div className="flex items-center justify-center py-4">
+  <div className="flex items-center justify-center py-2">
     <div className="h-px w-16 gold-gradient" />
     <span className="mx-4 text-gold text-xl">✦</span>
     <div className="h-px w-16 gold-gradient" />
@@ -66,7 +66,7 @@ const Index = () => {
     // Give a small delay to let sections render then start scroll
     setTimeout(() => {
       setIsScrolling(true);
-    }, 1000);
+    }, 1500);
   }, []);
 
   if (!guest) {
@@ -111,7 +111,7 @@ const Index = () => {
         <div className="absolute inset-0 pointer-events-none opacity-30"
           style={{ backgroundImage: `url(${patternBg})`, backgroundSize: '400px', mixBlendMode: 'overlay' }} />
 
-        <div className="relative z-10 pt-16">
+        <div className="relative z-10 pt-8">
           {/* Header Section */}
           <motion.div
             className="flex flex-col items-center text-center px-4 mb-12"
