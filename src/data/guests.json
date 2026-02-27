@@ -28,5 +28,11 @@
         "nombre": "Ismael Urbina",
         "mesa": "por asignar",
         "boletos": 2
+    },
+    {
+        "idInvitado": "50ANCRI04",
+        "nombre": "Andrea Cruz",
+        "mesa": "por asignar",
+        "boletos": 4
     }
 ]
