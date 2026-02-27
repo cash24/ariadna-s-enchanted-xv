@@ -1,26 +1,32 @@
 [
     {
-        "idInvitado": "INV001",
-        "nombre": "Familia Urbina García",
-        "mesa": 1,
+        "idInvitado": "1REJUI01",
+        "nombre": "Reyna Juan",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "2JOURI04",
+        "nombre": "José Luis Urbina",
+        "mesa": "por asignar",
         "boletos": 4
     },
     {
-        "idInvitado": "FAM002",
-        "nombre": "Sr. José Urbina",
-        "mesa": 1,
+        "idInvitado": "3MAURI02",
+        "nombre": "Magda Elizabeth Urbina",
+        "mesa": "por asignar",
         "boletos": 2
     },
     {
-        "idInvitado": "AMI003",
-        "nombre": "Magda Urbina & Familia",
-        "mesa": 2,
-        "boletos": 5
+        "idInvitado": "4EDSEI01",
+        "nombre": "Eduardo Septimo",
+        "mesa": "por asignar",
+        "boletos": 1
     },
     {
-        "idInvitado": "GEN004",
-        "nombre": "Invitado Especial",
-        "mesa": 10,
-        "boletos": 1
+        "idInvitado": "5ISURI02",
+        "nombre": "Ismael Urbina",
+        "mesa": "por asignar",
+        "boletos": 2
     }
 ]
