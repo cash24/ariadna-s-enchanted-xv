@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shirt, Camera, Heart } from "lucide-react";
+import { Shirt, Camera, Heart, Gift } from "lucide-react";
 
 const DressCodeSection = () => {
   return (
@@ -35,9 +35,9 @@ const DressCodeSection = () => {
               note: "Comparte tus fotos con este hashtag",
             },
             {
-              icon: <Heart className="w-8 h-8" />,
+              icon: <Gift className="w-8 h-8" />,
               title: "Obsequios",
-              description: "El mejor regalo es tu compañía; si deseas tener un detalle, agradeceré lluvia de sobres",
+              description: "El mejor regalo es tu compañía; si deseas tener un detalle, agradeceré lluvia de sobres 💌",
               note: "",
             },
           ].map((item, i) => (
