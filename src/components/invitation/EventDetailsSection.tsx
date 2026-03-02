@@ -16,7 +16,7 @@ const EventDetailsSection = () => {
           transition={{ delay: 0.1 }}
         >
           <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
-            Mi Padre
+            Acompañada de mi padre:
           </p>
           <p className="font-body text-xl text-cream mb-6">
             {FATHER_NAME}
@@ -25,7 +25,7 @@ const EventDetailsSection = () => {
           <div className="h-px w-16 gold-gradient mx-auto my-6" />
 
           <p className="font-heading text-xs uppercase tracking-[0.3em] text-gold-light mb-4">
-            Mis Padrinos
+            Y mis padrinos:
           </p>
           <p className="font-body text-xl text-cream mb-2">
             {MADRINA_NAME}

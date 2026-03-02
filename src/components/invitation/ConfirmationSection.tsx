@@ -33,7 +33,7 @@ const ConfirmationSection = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                 >
-                    Para nosotros es muy importante tu asistencia. Por favor confirma antes del <span className="text-gold font-bold">15 de Abril</span>.
+                    Tu presencia es muy importante para nosotros; por favor confirma tu asistencia antes del <span className="text-gold font-bold">15 de Abril</span>.
                 </motion.p>
 
                 <motion.button
