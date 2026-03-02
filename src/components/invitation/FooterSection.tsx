@@ -8,10 +8,16 @@ const FooterSection = () => (
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
     >
-      <p className="font-display text-4xl md:text-5xl text-gold mb-4">
+      <p className="font-display text-5xl md:text-6xl text-gold text-center mb-4 gold-glow">
         ¡Te esperamos!
       </p>
-      <p className="font-body text-cream/60 italic text-lg mb-8">
+      <motion.div
+        className="h-px w-24 gold-gradient mx-auto mb-12"
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+      />
+      <p className="font-body text-lg text-cream/80 max-w-2xl mx-auto mb-8 italic">
         “Un día mágico, un vestido soñado y personas especiales como tú.”
       </p>
       <p className="font-display text-3xl md:text-4xl text-gold gold-glow">

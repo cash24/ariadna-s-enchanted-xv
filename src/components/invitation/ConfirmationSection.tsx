@@ -12,16 +12,22 @@ const ConfirmationSection = () => {
         <section className="relative py-20 px-4">
             <div className="max-w-3xl mx-auto text-center">
                 <motion.h2
-                    className="font-display text-5xl md:text-6xl text-gold mb-6 gold-glow"
+                    className="font-display text-5xl md:text-6xl text-gold text-center mb-4 gold-glow"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
                     Confirmación
                 </motion.h2>
+                <motion.div
+                    className="h-px w-24 gold-gradient mx-auto mb-12"
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                />
 
                 <motion.p
-                    className="font-body text-xl text-cream/80 mb-10"
+                    className="font-body text-xl text-cream/80 max-w-2xl mx-auto mb-10 italic"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}

@@ -12,7 +12,7 @@ const GuestInfoSection = ({ guest, eventUrl }: { guest: GuestData; eventUrl: str
     <section className="relative py-20 px-4">
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2
-          className="font-display text-5xl md:text-6xl text-gold mb-4"
+          className="font-display text-5xl md:text-6xl text-gold text-center mb-4 gold-glow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

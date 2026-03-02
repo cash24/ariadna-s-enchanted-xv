@@ -120,6 +120,14 @@ const Index = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <h3 className="font-display text-4xl md:text-5xl text-gold gold-glow mb-4">
+              Con la bendición de Dios,
+            </h3>
+            <p className="font-body text-lg text-cream/80 max-w-2xl mx-auto mb-12 italic">
+              y con el amor de mi familia, tengo el honor de invitarte a celebrar conmigo
+              este día tan especial en el que cumplo mis XV años.
+            </p>
+
             <p className="font-heading text-sm uppercase tracking-[0.4em] text-gold-light mb-2">
               Mis XV
             </p>
@@ -139,14 +147,24 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
             />
-
-            <h3 className="font-display text-4xl md:text-5xl text-gold gold-glow">
-              Con la bendición de Dios
-            </h3>
           </motion.div>
 
-          {/* New Order: EventDetails (Family) -> Countdown (Faltan) -> Locations */}
+          {/* Family Section */}
           <EventDetailsSection />
+
+          {/* Invitation Phrase */}
+          <motion.div
+            className="text-center px-4 py-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <p className="font-body text-2xl text-gold-light italic max-w-lg mx-auto leading-relaxed">
+              Tu presencia hará de este día un recuerdo inolvidable
+            </p>
+          </motion.div>
+
           <SectionDivider />
           <CountdownSection />
           <SectionDivider />
