@@ -121,22 +121,19 @@ const Index = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="font-display text-4xl md:text-5xl text-gold gold-glow mb-4">
-              Con la bendición de Dios,
+              Con la bendición de Dios
             </h3>
             <p className="font-body text-lg text-cream/80 max-w-2xl mx-auto mb-12 italic">
-              y con el amor de mi familia, tengo el honor de invitarte a celebrar conmigo
-              este día tan especial en el que cumplo mis XV años.
+              y el amor de mi familia, tengo el honor de invitarte a compartir conmigo
+              este día tan especial.
             </p>
 
-            <p className="font-heading text-sm uppercase tracking-[0.4em] text-gold-light mb-2">
+            <p className="font-heading text-2xl uppercase tracking-[0.4em] text-gold-light mb-2">
               Mis XV
             </p>
             <h2 className="font-display text-7xl md:text-8xl gold-text-gradient gold-glow mb-2">
               Ariadna
             </h2>
-            <p className="font-heading text-lg text-cream mb-6">
-              25 de abril de 2026
-            </p>
 
             <motion.img
               src={roseDivider}

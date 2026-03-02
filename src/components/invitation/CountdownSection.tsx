@@ -33,6 +33,16 @@ const CountdownSection = () => {
     <section className="relative py-20 px-4 overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         <motion.p
+          className="font-display text-4xl md:text-5xl text-gold mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          {EVENT_DATE.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </motion.p>
+
+        <motion.p
           className="font-heading text-xs uppercase tracking-[0.5em] text-gold-light mb-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -62,16 +72,6 @@ const CountdownSection = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.p
-          className="mt-10 font-display text-3xl md:text-4xl text-gold"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-        >
-          {EVENT_DATE.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
-        </motion.p>
       </div>
     </section>
   );
