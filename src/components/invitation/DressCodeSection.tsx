@@ -38,7 +38,7 @@ const DressCodeSection = () => {
               icon: <Gift className="w-8 h-8" />,
               title: "Mesa de Regalos",
               description: "El mejor regalo es tu compañía; si deseas tener un detalle, agradeceré lluvia de sobres",
-              note: "Si deseas obsequiar algo, sugerimos lluvia de sobres 💌",
+              note: "",
             },
           ].map((item, i) => (
             <motion.div

@@ -111,7 +111,7 @@ const Index = () => {
         <div className="absolute inset-0 pointer-events-none opacity-30"
           style={{ backgroundImage: `url(${patternBg})`, backgroundSize: '400px', mixBlendMode: 'overlay' }} />
 
-        <div className="relative z-10 pt-40">
+        <div className="relative z-10 pt-24">
           {/* Header Section */}
           <motion.div
             className="flex flex-col items-center text-center px-4 mb-4"
