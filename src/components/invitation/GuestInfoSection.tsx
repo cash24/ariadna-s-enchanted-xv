@@ -20,11 +20,23 @@ const GuestInfoSection = ({ guest, eventUrl }: { guest: GuestData; eventUrl: str
           Tu Invitación
         </motion.h2>
         <motion.div
-          className="h-px w-24 gold-gradient mx-auto mb-12"
+          className="h-px w-24 gold-gradient mx-auto mb-8"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
         />
+
+        <motion.div
+          className="mb-12"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          <p className="font-body text-2xl text-cream">
+            Pases asignados: {guest.tickets}
+          </p>
+        </motion.div>
 
         <motion.div
           className="relative max-w-sm mx-auto"
