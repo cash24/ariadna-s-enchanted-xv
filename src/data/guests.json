@@ -139,7 +139,7 @@
     },
     {
         "idInvitado": "72ROLEI02",
-        "nombre": "Rogelia Leon",
+        "nombre": "Rogelia Leon Urbina",
         "mesa": "por asignar",
         "boletos": 2
     },
@@ -283,7 +283,7 @@
     },
     {
         "idInvitado": "133LALEI05",
-        "nombre": "Laura Leon",
+        "nombre": "Laura Garcia Leon",
         "mesa": "por asignar",
         "boletos": 5
     },
@@ -341,15 +341,70 @@
         "mesa": "por asignar",
         "boletos": 4
     },
-    {"idInvitado": "18XIFII01", "nombre": "Ximena Fierro", "mesa": "por asignar", "boletos": 1},
-    {"idInvitado": "19ALMUI01", "nombre": "Allison Muñoz", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "20ABMEI01", "nombre": "Abigail Mendez", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "21YEROI01", "nombre": "Yessica Rodriguez", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "22DUDeI01", "nombre": "Dulce Guadalupe", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "23ALORI01", "nombre": "Alejandra Ortiz", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "24ALHEI01", "nombre": "Alejandro Hernandez", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "25GACOI01", "nombre": "Gabriel Correa", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "26YOGII01", "nombre": "Yorley Gil Reynoso", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "27JADeI01", "nombre": "Javier", "mesa": "por asignar", "boletos": 1},
-{"idInvitado": "28AGJUI02", "nombre": "Agustina Juan Rosario", "mesa": "por asignar", "boletos": 2}
+    {
+        "idInvitado": "18XIFII01",
+        "nombre": "Ximena Fierro",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "19ALMUI01",
+        "nombre": "Allison Muñoz",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "20ABMEI01",
+        "nombre": "Abigail Mendez",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "21YEROI01",
+        "nombre": "Yessica Rodriguez",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "22DUDeI01",
+        "nombre": "Dulce Guadalupe",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "23ALORI01",
+        "nombre": "Alejandra Ortiz",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "24ALHEI01",
+        "nombre": "Alejandro Hernandez",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "25GACOI01",
+        "nombre": "Gabriel Correa",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "26YOGII01",
+        "nombre": "Yorley Gil Reynoso",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "27JADeI01",
+        "nombre": "Javier",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "28AGJUI02",
+        "nombre": "Agustina Juan Rosario",
+        "mesa": "por asignar",
+        "boletos": 2
+    }
 ]
