@@ -48,6 +48,24 @@
         "boletos": 5
     },
     {
+        "idInvitado": "13REBOI01",
+        "nombre": "Regina Paola Bojorquez Nieto",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "14XIPÉI01",
+        "nombre": "Ximena Pérez Solares",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "15GISAI01",
+        "nombre": "Gisel Sanchez Rubio",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
         "idInvitado": "17JEURI11",
         "nombre": "Jessica Ariadna Urbina",
         "mesa": "por asignar",
@@ -72,10 +90,10 @@
         "boletos": 2
     },
     {
-        "idInvitado": "35FRGAI02",
+        "idInvitado": "35FRGAI03",
         "nombre": "Francisco Javier Garduño",
         "mesa": "por asignar",
-        "boletos": 2
+        "boletos": 3
     },
     {
         "idInvitado": "37SAGAI02",
