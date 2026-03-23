@@ -192,8 +192,8 @@
         "boletos": 4
     },
     {
-        "idInvitado": "93AN?I02",
-        "nombre": "Ana ?",
+        "idInvitado": "93ANJII02",
+        "nombre": "Ana Karen Jimenez",
         "mesa": "por asignar",
         "boletos": 2
     },
@@ -204,32 +204,32 @@
         "boletos": 2
     },
     {
-        "idInvitado": "99JADeI01",
-        "nombre": "Janet",
+        "idInvitado": "99JAHUI02",
+        "nombre": "Janet Huitron",
+        "mesa": "por asignar",
+        "boletos": 2
+    },
+    {
+        "idInvitado": "100ROVAI01",
+        "nombre": "Rosalba Vazquez",
         "mesa": "por asignar",
         "boletos": 1
     },
     {
-        "idInvitado": "100RODeI01",
-        "nombre": "Rosy",
+        "idInvitado": "101NAHUI01",
+        "nombre": "Nancy Huitron",
         "mesa": "por asignar",
         "boletos": 1
     },
     {
-        "idInvitado": "101NADeI01",
-        "nombre": "Nancy",
+        "idInvitado": "102IVHUI01",
+        "nombre": "Ivan Huitron",
         "mesa": "por asignar",
         "boletos": 1
     },
     {
-        "idInvitado": "102IVDeI01",
-        "nombre": "Ivan",
-        "mesa": "por asignar",
-        "boletos": 1
-    },
-    {
-        "idInvitado": "103AL?I05",
-        "nombre": "Alejandra ?",
+        "idInvitado": "103ALJII05",
+        "nombre": "Alejandra Jimenez",
         "mesa": "por asignar",
         "boletos": 5
     },
@@ -282,8 +282,8 @@
         "boletos": 2
     },
     {
-        "idInvitado": "126RU?I04",
-        "nombre": "Ruben ?",
+        "idInvitado": "126RULOI04",
+        "nombre": "Ruben Lopez Sepulveda",
         "mesa": "por asignar",
         "boletos": 4
     },
@@ -422,6 +422,12 @@
     {
         "idInvitado": "28AGJUI02",
         "nombre": "Agustina Juan Rosario",
+        "mesa": "por asignar",
+        "boletos": 2
+    },
+    {
+        "idInvitado": "8ALYFI02",
+        "nombre": "Alfredo y Fanny",
         "mesa": "por asignar",
         "boletos": 2
     }
