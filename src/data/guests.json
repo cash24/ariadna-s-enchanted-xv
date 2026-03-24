@@ -36,10 +36,22 @@
         "boletos": 2
     },
     {
-        "idInvitado": "9SAURI03",
+        "idInvitado": "9SAURI01",
         "nombre": "Said Ismael Urbina",
         "mesa": "por asignar",
-        "boletos": 3
+        "boletos": 1
+    },
+    {
+        "idInvitado": "10KYLAI01",
+        "nombre": "Kymani Emmanuel Lara",
+        "mesa": "por asignar",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "11SACRI01",
+        "nombre": "Santiago Emanuel Cruz",
+        "mesa": "por asignar",
+        "boletos": 1
     },
     {
         "idInvitado": "12ALURI05",
