@@ -454,5 +454,11 @@
         "nombre": "Alfredo y Fanny",
         "mesa": "por asignar",
         "boletos": 2
+    },
+    {
+        "idInvitado": "88CAJUI02",
+        "nombre": "Carlos Juan",
+        "mesa": "por asignar",
+        "boletos": 2
     }
 ]
