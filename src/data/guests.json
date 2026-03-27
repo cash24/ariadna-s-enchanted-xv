@@ -156,10 +156,10 @@
         "boletos": 5
     },
     {
-        "idInvitado": "55FEJUI07",
+        "idInvitado": "55FEJUI08",
         "nombre": "Felix Juan",
         "mesa": "por asignar",
-        "boletos": 7
+        "boletos": 8
     },
     {
         "idInvitado": "58DAJUI02",
@@ -456,9 +456,9 @@
         "boletos": 2
     },
     {
-        "idInvitado": "88CAJUI02",
+        "idInvitado": "88CAJUI03",
         "nombre": "Carlos Juan",
         "mesa": "por asignar",
-        "boletos": 2
+        "boletos": 3
     }
 ]
