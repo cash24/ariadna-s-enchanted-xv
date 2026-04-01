@@ -460,5 +460,11 @@
         "nombre": "Carlos Juan",
         "mesa": "por asignar",
         "boletos": 3
+    },
+    {
+        "idInvitado": "89KAMAUI02",
+        "nombre": "Karla Martinez",
+        "mesa": "por asignar",
+        "boletos": 2
     }
 ]
