@@ -6,8 +6,9 @@ const events = [
   { time: "7:45 PM", label: "Recepción en Salón", icon: <Wine className="w-5 h-5" /> },
   { time: "8:15 PM", label: "Presentación de Ariadna", icon: <Star className="w-5 h-5" /> },
   { time: "8:30 PM", label: "Cena", icon: <Utensils className="w-5 h-5" /> },
-  { time: "9:30 PM", label: "Vals y Bailables", icon: <Music className="w-5 h-5" /> },
-  { time: "10:30 PM", label: "Partida de Pastel", icon: <Cake className="w-5 h-5" /> },
+  { time: "9:30 PM", label: "Vals", icon: <Music className="w-5 h-5" /> },
+  { time: "10:00 PM", label: "Partida de Pastel", icon: <Cake className="w-5 h-5" /> },
+  { time: "10:15 PM", label: "Bailes quinceañera", icon: <Music className="w-5 h-5" /> },
   { time: "10:45 PM", label: "Baile", icon: <PartyPopper className="w-5 h-5" /> },
 ];
 
