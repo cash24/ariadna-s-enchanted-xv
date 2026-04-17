@@ -21,7 +21,7 @@ const TimelineSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Itinerario
+          Programa del evento
         </motion.h2>
         <motion.div
           className="h-px w-24 gold-gradient mx-auto mb-16"
