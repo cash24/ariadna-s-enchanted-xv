@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { Church, Wine, Star, Utensils, Music, Cake, PartyPopper } from "lucide-react";
 
 const events = [
-  { time: "6:00 PM",  label: "Ceremonia Religiosa",           icon: <Church className="w-5 h-5" /> },
-  { time: "7:45 PM",  label: "Recepción en Salón",            icon: <Wine className="w-5 h-5" /> },
-  { time: "8:30 PM",  label: "Presentación de la Quinceañera", icon: <Star className="w-5 h-5" /> },
-  { time: "8:45 PM",  label: "Cena",                          icon: <Utensils className="w-5 h-5" /> },
-  { time: "10:00 PM", label: "Vals y Bailables",               icon: <Music className="w-5 h-5" /> },
-  { time: "11:30 PM", label: "Partida de Pastel",              icon: <Cake className="w-5 h-5" /> },
-  { time: "11:30 PM", label: "Baile",                          icon: <PartyPopper className="w-5 h-5" /> },
+  { time: "6:00 PM", label: "Ceremonia Religiosa", icon: <Church className="w-5 h-5" /> },
+  { time: "7:45 PM", label: "Recepción en Salón", icon: <Wine className="w-5 h-5" /> },
+  { time: "8:15 PM", label: "Presentación de la Quinceañera", icon: <Star className="w-5 h-5" /> },
+  { time: "8:30 PM", label: "Cena", icon: <Utensils className="w-5 h-5" /> },
+  { time: "9:30 PM", label: "Vals y Bailables", icon: <Music className="w-5 h-5" /> },
+  { time: "10:30 PM", label: "Partida de Pastel", icon: <Cake className="w-5 h-5" /> },
+  { time: "10:45 PM", label: "Baile", icon: <PartyPopper className="w-5 h-5" /> },
 ];
 
 const TimelineSection = () => {
