@@ -10,6 +10,10 @@ import DressCodeSection from "@/components/invitation/DressCodeSection";
 import FooterSection from "@/components/invitation/FooterSection";
 import MusicPlayer from "@/components/invitation/MusicPlayer";
 import ConfirmationSection from "@/components/invitation/ConfirmationSection";
+
+import PhotoUploadSection from "@/components/invitation/PhotoUploadSection";
+import TimelineSection from "@/components/invitation/TimelineSection";
+import GoldDustEffect from "@/components/invitation/GoldDustEffect";
 import { getGuestData } from "@/data/eventData";
 import patternBg from "@/assets/pattern-bg.jpg";
 import roseDivider from "@/assets/rose-divider.png";
@@ -89,6 +93,8 @@ const Index = () => {
     <>
       <CoverSection guestName={guest.name} onOpen={handleOpenInvitation} />
 
+      <GoldDustEffect active={isOpen} />
+
       <MusicPlayer isPlaying={isMusicPlaying} onToggle={setIsMusicPlaying} />
 
       <motion.div
@@ -167,9 +173,13 @@ const Index = () => {
           <SectionDivider />
           <LocationsSection />
           <SectionDivider />
+          <TimelineSection />
+          <SectionDivider />
           <GuestInfoSection guest={guest} eventUrl={eventUrl} />
           <SectionDivider />
           <DressCodeSection />
+          <SectionDivider />
+          <PhotoUploadSection />
           <SectionDivider />
           <ConfirmationSection />
           <SectionDivider />
