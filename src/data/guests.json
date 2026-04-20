@@ -2,463 +2,439 @@
     {
         "idInvitado": "1REJUI01",
         "nombre": "Reyna Juan",
-        "mesa": 1,
+        "mesa": 7,
         "boletos": 1
     },
     {
         "idInvitado": "2JOURI04",
         "nombre": "José Luis Urbina",
-        "mesa": 2,
+        "mesa": 12,
         "boletos": 4
     },
     {
         "idInvitado": "3MAURI02",
         "nombre": "Magda Elizabeth Urbina",
-        "mesa": 1,
+        "mesa": 7,
         "boletos": 2
     },
     {
         "idInvitado": "4EDSEI01",
         "nombre": "Eduardo Septimo",
-        "mesa": 1,
+        "mesa": 7,
         "boletos": 1
     },
     {
         "idInvitado": "5ISURI02",
         "nombre": "Ismael Urbina",
-        "mesa": 1,
+        "mesa": 7,
         "boletos": 2
     },
     {
         "idInvitado": "7AXURI02",
         "nombre": "Axel Jesús Urbina",
-        "mesa": "por asignar",
+        "mesa": "Mesa de Honor",
         "boletos": 2
     },
     {
         "idInvitado": "9SAURI01",
         "nombre": "Said Ismael Urbina",
-        "mesa": "por asignar",
+        "mesa": "Mesa de Honor",
         "boletos": 1
     },
     {
         "idInvitado": "10KYLAI01",
         "nombre": "Kymani Emmanuel Lara",
-        "mesa": "por asignar",
+        "mesa": "2",
         "boletos": 1
     },
     {
         "idInvitado": "11SACRI01",
         "nombre": "Santiago Emanuel Cruz",
-        "mesa": "por asignar",
+        "mesa": "2",
         "boletos": 1
     },
     {
         "idInvitado": "8STALI02",
         "nombre": "Stephany y Alfredo",
-        "mesa": "por asignar",
+        "mesa": "8",
         "boletos": 2
     },
     {
         "idInvitado": "74ABGAI02",
         "nombre": "Abel Garcia Leon",
-        "mesa": "por asignar",
+        "mesa": "12",
         "boletos": 2
     },
     {
         "idInvitado": "12ALURI05",
         "nombre": "Alan Urbina",
-        "mesa": "por asignar",
+        "mesa": "Mesa de Honor",
         "boletos": 5
     },
     {
         "idInvitado": "13REBOI01",
         "nombre": "Regina Paola Bojorquez Nieto",
-        "mesa": "por asignar",
+        "mesa": "2",
         "boletos": 1
     },
     {
         "idInvitado": "14XIPÉI01",
         "nombre": "Ximena Pérez Solares",
-        "mesa": "por asignar",
+        "mesa": "2",
         "boletos": 1
     },
     {
         "idInvitado": "15GISAI01",
         "nombre": "Gisel Sanchez Rubio",
-        "mesa": "por asignar",
+        "mesa": "2",
         "boletos": 1
     },
     {
         "idInvitado": "17JEURI11",
         "nombre": "Jessica Ariadna Urbina",
-        "mesa": "por asignar",
-        "boletos": 11
+        "mesa": "Mesa de Honor",
+        "boletos": 1
     },
     {
         "idInvitado": "28AGJUI02",
-        "nombre": "Agustina Juan Rosario",
-        "mesa": "por asignar",
-        "boletos": 2
+        "nombre": "Juan Carmona",
+        "mesa": "7",
+        "boletos": 1
     },
     {
         "idInvitado": "30DACAI03",
         "nombre": "Dario Carmona",
-        "mesa": "por asignar",
+        "mesa": "7",
         "boletos": 3
     },
     {
         "idInvitado": "33MAJUI02",
         "nombre": "Maria de la Luz Juan Rosario",
-        "mesa": "por asignar",
+        "mesa": "9",
         "boletos": 2
-    },
-    {
-        "idInvitado": "35FRGAI03",
-        "nombre": "Francisco Javier Garduño",
-        "mesa": "por asignar",
-        "boletos": 3
     },
     {
         "idInvitado": "37SAGAI02",
         "nombre": "Saul Garduño",
-        "mesa": "por asignar",
+        "mesa": "9",
         "boletos": 2
     },
     {
         "idInvitado": "39ISJUI04",
         "nombre": "Isabel Juan Rosario",
-        "mesa": "por asignar",
+        "mesa": "9 y 10",
         "boletos": 4
     },
     {
         "idInvitado": "43LILOI05",
         "nombre": "Liliana Lozano Juan",
-        "mesa": "por asignar",
+        "mesa": "10",
         "boletos": 5
     },
     {
         "idInvitado": "46BLLOI02",
         "nombre": "Blanca Lozano Juan",
-        "mesa": "por asignar",
+        "mesa": "9",
         "boletos": 2
     },
     {
         "idInvitado": "49MIURI01",
         "nombre": "Miguel Urbina",
-        "mesa": "por asignar",
+        "mesa": "7",
         "boletos": 1
     },
     {
         "idInvitado": "50ANCRI05",
         "nombre": "Andrea Cruz",
-        "mesa": "por asignar",
-        "boletos": 5
+        "mesa": "8",
+        "boletos": 9
     },
     {
         "idInvitado": "55FEJUI08",
         "nombre": "Felix Juan",
-        "mesa": "por asignar",
-        "boletos": 8
+        "mesa": "11 y 9",
+        "boletos": 7
     },
     {
         "idInvitado": "58DAJUI02",
         "nombre": "Daniel Juan",
-        "mesa": "por asignar",
-        "boletos": 2
+        "mesa": "11",
+        "boletos": 1
     },
     {
         "idInvitado": "60GAJUI04",
         "nombre": "Gabriel Juan",
-        "mesa": "por asignar",
-        "boletos": 4
-    },
-    {
-        "idInvitado": "64CAJUI04",
-        "nombre": "Carolina Juan",
-        "mesa": "por asignar",
-        "boletos": 4
+        "mesa": "11",
+        "boletos": 3
     },
     {
         "idInvitado": "72ROLEI02",
         "nombre": "Rogelia Leon Urbina",
-        "mesa": "por asignar",
+        "mesa": "12",
         "boletos": 2
     },
     {
         "idInvitado": "74ABGAI02",
         "nombre": "Abel Garcia",
-        "mesa": "por asignar",
+        "mesa": "12",
         "boletos": 2
     },
     {
         "idInvitado": "76FEGAI02",
         "nombre": "Fernando Garcia",
-        "mesa": "por asignar",
+        "mesa": "15",
         "boletos": 2
     },
     {
         "idInvitado": "78MIGAI02",
         "nombre": "Miguel Garcia",
-        "mesa": "por asignar",
+        "mesa": "15",
         "boletos": 2
     },
     {
         "idInvitado": "83RAURI04",
         "nombre": "Rafaela Urbina",
-        "mesa": "por asignar",
-        "boletos": 4
+        "mesa": "12 y 14",
+        "boletos": 5
     },
     {
         "idInvitado": "89RAJUI04",
         "nombre": "Rafael Juan",
-        "mesa": "por asignar",
+        "mesa": "14",
         "boletos": 4
     },
     {
         "idInvitado": "93ANJII02",
         "nombre": "Ana Karen Jimenez",
-        "mesa": "por asignar",
+        "mesa": "4",
         "boletos": 2
     },
     {
         "idInvitado": "98LUJUI02",
         "nombre": "Luis Juan",
-        "mesa": "por asignar",
-        "boletos": 2
+        "mesa": "11",
+        "boletos": 1
     },
     {
         "idInvitado": "99JAHUI02",
         "nombre": "Janet Huitron",
-        "mesa": "por asignar",
+        "mesa": "3",
         "boletos": 2
     },
     {
         "idInvitado": "100ROVAI01",
         "nombre": "Rosalba Vazquez",
-        "mesa": "por asignar",
+        "mesa": "3",
         "boletos": 1
     },
     {
         "idInvitado": "101NAHUI01",
         "nombre": "Nancy Huitron",
-        "mesa": "por asignar",
+        "mesa": "3",
         "boletos": 1
     },
     {
         "idInvitado": "102IVHUI01",
         "nombre": "Ivan Huitron",
-        "mesa": "por asignar",
+        "mesa": "3",
         "boletos": 1
     },
     {
         "idInvitado": "103ALJII05",
         "nombre": "Alejandra Jimenez",
-        "mesa": "por asignar",
+        "mesa": "4",
         "boletos": 5
     },
     {
         "idInvitado": "108VEMEI02",
         "nombre": "Vera Méndez",
-        "mesa": "por asignar",
+        "mesa": "3",
         "boletos": 2
     },
     {
         "idInvitado": "110DIALI03",
         "nombre": "Diana Alcalá",
-        "mesa": "por asignar",
+        "mesa": "4",
         "boletos": 3
     },
     {
         "idInvitado": "113LUMEI02",
         "nombre": "Lucerito Mendoza",
-        "mesa": "por asignar",
+        "mesa": "5",
         "boletos": 2
     },
     {
         "idInvitado": "115BECAI03",
         "nombre": "Berenice Castellanos",
-        "mesa": "por asignar",
-        "boletos": 3
+        "mesa": "5",
+        "boletos": 2
     },
     {
         "idInvitado": "117HECAI02",
         "nombre": "Heriberto Castellanos",
-        "mesa": "por asignar",
+        "mesa": "6",
         "boletos": 2
     },
     {
         "idInvitado": "119YARII03",
         "nombre": "Yadira Rios",
-        "mesa": "por asignar",
+        "mesa": "5",
         "boletos": 3
     },
     {
         "idInvitado": "122JHDeI02",
         "nombre": "Jhonathan",
-        "mesa": "por asignar",
+        "mesa": "6",
         "boletos": 2
     },
     {
         "idInvitado": "124BERII02",
         "nombre": "Beatriz Rios",
-        "mesa": "por asignar",
+        "mesa": "5",
         "boletos": 2
     },
     {
         "idInvitado": "126RULOI04",
         "nombre": "Ruben Lopez Sepulveda",
-        "mesa": "por asignar",
+        "mesa": "10",
         "boletos": 4
     },
     {
         "idInvitado": "129REIBI02",
         "nombre": "Rene Ibañez",
-        "mesa": "por asignar",
+        "mesa": "6",
         "boletos": 2
     },
     {
         "idInvitado": "131MICAI02",
         "nombre": "Miguel Angel Cano",
-        "mesa": "por asignar",
+        "mesa": "6",
         "boletos": 2
     },
     {
         "idInvitado": "133LALEI05",
         "nombre": "Laura Garcia Leon",
-        "mesa": "por asignar",
+        "mesa": "13",
         "boletos": 5
     },
     {
         "idInvitado": "138ALPEI04",
         "nombre": "Alejandro Perez",
-        "mesa": "por asignar",
+        "mesa": "3",
         "boletos": 4
     },
     {
         "idInvitado": "142RIDeI02",
         "nombre": "Rioja",
-        "mesa": "por asignar",
+        "mesa": "15",
         "boletos": 2
     },
     {
         "idInvitado": "143ISGAI02",
         "nombre": "Israel Garcia",
-        "mesa": "por asignar",
+        "mesa": "15",
         "boletos": 2
-    },
-    {
-        "idInvitado": "145DeDeI00",
-        "nombre": "Invitado",
-        "mesa": "por asignar",
-        "boletos": 0
     },
     {
         "idInvitado": "146ENGAI02",
         "nombre": "Enrique Garcia",
-        "mesa": "por asignar",
-        "boletos": 2
-    },
-    {
-        "idInvitado": "147VIOVI02",
-        "nombre": "Victor Oviedo",
-        "mesa": "por asignar",
+        "mesa": "15",
         "boletos": 2
     },
     {
         "idInvitado": "149OSMEI02",
         "nombre": "Oswald Mendez",
-        "mesa": "por asignar",
+        "mesa": "13",
         "boletos": 2
     },
     {
         "idInvitado": "151CAJII02",
         "nombre": "Carlos Jimenez",
-        "mesa": "por asignar",
+        "mesa": "13",
         "boletos": 2
     },
     {
         "idInvitado": "153VECHI02",
         "nombre": "Veronica Chavez",
-        "mesa": "por asignar",
+        "mesa": "6",
         "boletos": 2
     },
     {
         "idInvitado": "18XIFII01",
         "nombre": "Ximena Fierro",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "19ALMUI01",
         "nombre": "Allison Muñoz",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "20ABMEI01",
         "nombre": "Abigail Mendez",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "22DUDeI01",
         "nombre": "Dulce Guadalupe",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "23ALORI01",
         "nombre": "Alejandra Ortiz",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "24ALHEI01",
         "nombre": "Alejandro Hernandez",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "25GACOI01",
         "nombre": "Gabriel Correa",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "26YOGII01",
         "nombre": "Yorley Gil Reynoso",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "27JADeI01",
         "nombre": "Javier",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     },
     {
         "idInvitado": "28AGJUI02",
         "nombre": "Agustina Juan Rosario",
-        "mesa": "por asignar",
-        "boletos": 2
+        "mesa": "7",
+        "boletos": 0
     },
     {
         "idInvitado": "8ALYFI02",
         "nombre": "Alfredo y Fanny",
-        "mesa": "por asignar",
+        "mesa": "8",
         "boletos": 2
     },
     {
         "idInvitado": "88CAJUI03",
         "nombre": "Carlos Juan",
-        "mesa": "por asignar",
+        "mesa": "14",
         "boletos": 3
     },
     {
         "idInvitado": "89KAMAUI01",
         "nombre": "Karla Martinez",
-        "mesa": "por asignar",
+        "mesa": "1",
         "boletos": 1
     }
 ]
