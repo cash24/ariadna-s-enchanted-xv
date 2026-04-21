@@ -436,5 +436,23 @@
         "nombre": "Karla Martinez",
         "mesa": "1",
         "boletos": 1
+    },
+    {
+        "idInvitado": "90KAMAUI01",
+        "nombre": "Emiliano Rojas",
+        "mesa": "2",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "91KAMAUI01",
+        "nombre": "Eder Valdez",
+        "mesa": "1",
+        "boletos": 1
+    },
+    {
+        "idInvitado": "92KAMAUI01",
+        "nombre": "Melissa Martinez",
+        "mesa": "1",
+        "boletos": 1
     }
 ]
